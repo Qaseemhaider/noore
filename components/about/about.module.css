@@ -1,0 +1,430 @@
+/* ---------------------------------------------------------------------------
+   NOORE About page — editorial brand-story composition.
+   Uses shared tokens and the existing Reveal motion primitive only.
+--------------------------------------------------------------------------- */
+
+/* Editorial hero ---------------------------------------------------------- */
+
+.hero {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heroInner {
+  padding-block: clamp(3rem, 7vw, 5rem) clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.heroCopy {
+  max-width: 36rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.85rem;
+  color: var(--color-crimson);
+}
+
+.heroTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.25rem, 6.5vw, 6.5rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.heroLine {
+  display: block;
+}
+
+.heroAccent {
+  color: var(--color-crimson);
+}
+
+.heroLead {
+  max-width: 27rem;
+  margin: 1.75rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.heroImageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-surface-muted);
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero entrance — CSS-owned, same easing/language as the homepage hero. */
+.heroEyebrow {
+  animation: about-line-in 560ms var(--ease-out) 120ms both;
+}
+
+.heroTitle .heroLine:nth-child(1) {
+  animation: about-line-in 560ms var(--ease-out) 220ms both;
+}
+
+.heroTitle .heroLine:nth-child(2) {
+  animation: about-line-in 560ms var(--ease-out) 340ms both;
+}
+
+.heroLeadAnim {
+  animation: about-copy-in 520ms var(--ease-out) 460ms both;
+}
+
+.heroImageAnim {
+  animation: about-media-in 820ms var(--ease-out) 420ms both;
+}
+
+@keyframes about-line-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+@keyframes about-copy-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+}
+
+@keyframes about-media-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0) scale(1.015);
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+/* Shared editorial sections ---------------------------------------------- */
+
+.section {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionHeader {
+  max-width: 46rem;
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+/* Image panels with the shared mask reveal (content visible without JS) --- */
+
+.imageFrame {
+  position: relative;
+  aspect-ratio: 3 / 4.25;
+  overflow: hidden;
+  background: var(--color-surface-muted);
+}
+
+.mediaMask {
+  position: absolute;
+  inset: 0;
+}
+
+.fillImage {
+  object-fit: cover;
+}
+
+:global(.reveal[data-reveal-ready="true"]) .mediaMask {
+  clip-path: inset(0 0 100% 0);
+  transition:
+    clip-path var(--duration-reveal) var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+:global(.reveal[data-reveal-visible="true"]) .mediaMask {
+  clip-path: inset(0);
+}
+
+/* Philosophy -------------------------------------------------------------- */
+
+.principleLead {
+  max-width: 30rem;
+  margin: 0 0 1.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.8vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.principleRow,
+.craftRow {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.principleIndex {
+  padding-top: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-crimson);
+}
+
+.principleTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.6vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.principleBody {
+  max-width: 27rem;
+  margin: 0.45rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+/* Story ------------------------------------------------------------------ */
+
+.story {
+  background: var(--color-soft-cream);
+}
+
+.storyText {
+  max-width: 36rem;
+}
+
+.storyParagraphs {
+  margin-top: 1.75rem;
+}
+
+.storyParagraphs p {
+  margin: 0 0 1.25rem;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.storyParagraphs p:last-child {
+  margin-bottom: 0;
+}
+
+/* Craft & detail ---------------------------------------------------------- */
+
+.craftImageFrame {
+  aspect-ratio: 4 / 3;
+}
+
+.craftItems {
+  padding-top: 0.75rem;
+}
+
+.craftRow {
+  padding-block: 1.75rem;
+}
+
+.craftTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.7vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Values ------------------------------------------------------------------ */
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.valuesCell {
+  min-width: 0;
+  padding: 2.25rem 1.75rem 2.5rem;
+}
+
+.valuesCell:not(:first-child) {
+  border-left: 1px solid var(--color-border);
+}
+
+.valuesTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.valuesBody {
+  max-width: 14rem;
+  margin: 0.6rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Closing statement -------------------------------------------------------- */
+
+.closing {
+  padding-block: clamp(4.5rem, 11vw, 8rem);
+  background: var(--color-obsidian);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.closingEyebrow {
+  margin-bottom: 1.5rem;
+  color: var(--color-champagne);
+}
+
+.closingTitle {
+  max-width: 60rem;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.closingLine {
+  display: block;
+}
+
+.closingAccent {
+  color: var(--color-champagne);
+}
+
+.closingCta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.75rem;
+}
+
+/* Responsive --------------------------------------------------------------- */
+
+@media (max-width: 63.999rem) {
+  .heroInner {
+    padding-block: 2.75rem;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .heroLead {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .heroImageWrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .section {
+    padding-block: 2.75rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 1.75rem;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .storyParagraphs {
+    margin-top: 1.25rem;
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 0;
+  }
+
+  .valuesCell {
+    padding: 1.75rem 1rem 2rem;
+  }
+
+  .valuesTitle {
+    font-size: clamp(1.15rem, 5.5vw, 1.35rem);
+  }
+
+  .valuesCell:not(:first-child) {
+    border-left: 0;
+  }
+
+  .valuesCell:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .valuesCell:nth-child(n + 3) {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .closing {
+    padding-block: 3.75rem;
+  }
+
+  .closingTitle {
+    font-size: clamp(1.9rem, 8.5vw, 2.75rem);
+  }
+
+  .closingCta {
+    margin-top: 2.25rem;
+  }
+}
+
+/* Reduced motion ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .heroEyebrow,
+  .heroTitle .heroLine,
+  .heroLeadAnim,
+  .heroImageAnim {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+  }
+}
