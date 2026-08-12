@@ -1,0 +1,256 @@
+- generic [active] [ref=f14e1]:
+  - link "Skip to content" [ref=f14e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - complementary "Shipping announcement" [ref=f14e3]: Free shipping on orders above PKR 10,000
+  - banner [ref=f14e4]:
+    - generic [ref=f14e5]:
+      - link "NOORE home" [ref=f14e6] [cursor=pointer]:
+        - /url: /
+        - text: NOORE
+      - navigation "Primary navigation" [ref=f14e8]:
+        - list [ref=f14e9]:
+          - listitem [ref=f14e10]:
+            - group [ref=f14e11]:
+              - generic "Shop" [ref=f14e12] [cursor=pointer]
+          - listitem [ref=f14e15]:
+            - link "Abayas" [ref=f14e16] [cursor=pointer]:
+              - /url: /shop/abayas
+          - listitem [ref=f14e17]:
+            - link "Hijabs" [ref=f14e18] [cursor=pointer]:
+              - /url: /shop/hijabs
+          - listitem [ref=f14e19]:
+            - link "Chadars" [ref=f14e20] [cursor=pointer]:
+              - /url: /shop/chadars
+          - listitem [ref=f14e21]:
+            - link "About" [ref=f14e22] [cursor=pointer]:
+              - /url: /about
+      - navigation "Account and shopping" [ref=f14e23]:
+        - link "Search" [ref=f14e24] [cursor=pointer]:
+          - /url: /search
+        - link "My account" [ref=f14e28] [cursor=pointer]:
+          - /url: /account
+        - link "Wishlist" [ref=f14e32] [cursor=pointer]:
+          - /url: /wishlist
+        - button "Open cart, 0 items" [ref=f14e35] [cursor=pointer]:
+          - generic [ref=f14e39]: "0"
+  - main [ref=f14e40]:
+    - region [ref=f14e41]:
+      - img "Woman wearing a flowing black abaya beneath warm sandstone arches" [ref=f14e43]
+      - generic [ref=f14e44]:
+        - heading "MODESTY. ELEGANCE. YOU." [level=1] [ref=f14e45]: MODESTY.ELEGANCE.YOU.
+        - paragraph [ref=f14e46]: Timeless designs for the modern woman.
+        - link "Shop now" [ref=f14e47] [cursor=pointer]:
+          - /url: /shop
+      - link "Scroll to explore" [ref=f14e48] [cursor=pointer]:
+        - /url: "#worlds"
+        - generic [ref=f14e49]: ↕
+        - text: Scroll to explore
+    - region [ref=f14e50]:
+      - heading "Explore our worlds" [level=2] [ref=f14e51]
+      - generic [ref=f14e52]:
+        - link "Black abaya Abayas Shop now" [ref=f14e53] [cursor=pointer]:
+          - /url: /shop/abayas
+          - img "Black abaya" [ref=f14e54]
+          - generic [ref=f14e55]: Abayas
+          - generic [ref=f14e56]: Shop now →
+        - link "Dusty rose hijab Hijabs Shop now" [ref=f14e57] [cursor=pointer]:
+          - /url: /shop/hijabs
+          - img "Dusty rose hijab" [ref=f14e58]
+          - generic [ref=f14e59]: Hijabs
+          - generic [ref=f14e60]: Shop now →
+        - link "Taupe modest garment Chadars Shop now" [ref=f14e61] [cursor=pointer]:
+          - /url: /shop/chadars
+          - img "Taupe modest garment" [ref=f14e62]
+          - generic [ref=f14e63]: Chadars
+          - generic [ref=f14e64]: Shop now →
+        - link "Chocolate brown abaya Collections Shop now" [ref=f14e65] [cursor=pointer]:
+          - /url: /shop
+          - img "Chocolate brown abaya" [ref=f14e66]
+          - generic [ref=f14e67]: Collections
+          - generic [ref=f14e68]: Shop now →
+    - region [ref=f14e69]:
+      - generic [ref=f14e70]:
+        - generic [ref=f14e71]:
+          - heading "Signature Collection" [level=2] [ref=f14e72]
+          - paragraph [ref=f14e73]: Explore our most loved pieces.
+        - link "View all" [ref=f14e74] [cursor=pointer]:
+          - /url: /shop/all
+      - generic [ref=f14e75]:
+        - article [ref=f14e76]:
+          - link [ref=f14e77] [cursor=pointer]:
+            - /url: /product/haya
+            - img "Chocolate brown Noore-e-Haya abaya" [ref=f14e78]
+          - button "Add Noore-e-Haya Abaya to wishlist" [ref=f14e79] [cursor=pointer]
+          - heading "Noore-e-Haya Abaya" [level=3] [ref=f14e82]
+          - text: PKR 12,900
+        - article [ref=f14e83]:
+          - link [ref=f14e84] [cursor=pointer]:
+            - /url: /product/luna
+            - img "Black Luna abaya" [ref=f14e85]
+          - button "Add Luna Abaya to wishlist" [ref=f14e86] [cursor=pointer]
+          - heading "Luna Abaya" [level=3] [ref=f14e89]
+          - text: PKR 11,500
+        - article [ref=f14e90]:
+          - link [ref=f14e91] [cursor=pointer]:
+            - /url: /product/dusk
+            - img "Black embroidered Dusk abaya" [ref=f14e92]
+          - button "Add Dusk Embroidered Abaya to wishlist" [ref=f14e93] [cursor=pointer]
+          - heading "Dusk Embroidered Abaya" [level=3] [ref=f14e96]
+          - text: PKR 13,900
+        - article [ref=f14e97]:
+          - link [ref=f14e98] [cursor=pointer]:
+            - /url: /product/elegance
+            - img "Taupe Elegance abaya" [ref=f14e99]
+          - button "Add Elegance Abaya to wishlist" [ref=f14e100] [cursor=pointer]
+          - heading "Elegance Abaya" [level=3] [ref=f14e103]
+          - text: PKR 12,500
+    - region "Shopping benefits" [ref=f14e110]:
+      - generic [ref=f14e114]:
+        - heading "Free shipping" [level=2] [ref=f14e115]
+        - paragraph [ref=f14e116]: On orders above PKR 10,000
+      - generic [ref=f14e120]:
+        - heading "Easy returns" [level=2] [ref=f14e121]
+        - paragraph [ref=f14e122]: 14 days return policy
+      - generic [ref=f14e127]:
+        - heading "Secure payment" [level=2] [ref=f14e128]
+        - paragraph [ref=f14e129]: 100% secure checkout
+      - generic [ref=f14e133]:
+        - heading "Customer support" [level=2] [ref=f14e134]
+        - paragraph [ref=f14e135]: We are here to help
+    - region [ref=f14e136]:
+      - generic [ref=f14e137]:
+        - heading "New Arrivals" [level=2] [ref=f14e139]
+        - link "View all" [ref=f14e140] [cursor=pointer]:
+          - /url: /shop/all
+      - generic [ref=f14e141]:
+        - article [ref=f14e142]:
+          - link [ref=f14e143] [cursor=pointer]:
+            - /url: /product/chiffon
+            - img "Dusty rose chiffon hijab" [ref=f14e144]
+          - button "Add Chiffon Hijab to wishlist" [ref=f14e145] [cursor=pointer]
+          - heading "Chiffon Hijab" [level=3] [ref=f14e148]
+          - text: PKR 1,850
+        - article [ref=f14e149]:
+          - link [ref=f14e150] [cursor=pointer]:
+            - /url: /product/chadar
+            - img "Taupe Noore chadar" [ref=f14e151]
+          - button "Add Noore Chadar to wishlist" [ref=f14e152] [cursor=pointer]
+          - heading "Noore Chadar" [level=3] [ref=f14e155]
+          - text: PKR 2,450
+        - article [ref=f14e156]:
+          - link [ref=f14e157] [cursor=pointer]:
+            - /url: /product/jersey
+            - img "Black premium jersey hijab" [ref=f14e158]
+          - button "Add Premium Jersey Hijab to wishlist" [ref=f14e159] [cursor=pointer]
+          - heading "Premium Jersey Hijab" [level=3] [ref=f14e162]
+          - text: PKR 1,950
+        - article [ref=f14e163]:
+          - link [ref=f14e164] [cursor=pointer]:
+            - /url: /product/linen
+            - img "Brown linen abaya" [ref=f14e165]
+          - button "Add Linen Abaya to wishlist" [ref=f14e166] [cursor=pointer]
+          - heading "Linen Abaya" [level=3] [ref=f14e169]
+          - text: PKR 11,900
+    - region [ref=f14e176]:
+      - heading "As seen in" [level=2] [ref=f14e177]
+      - generic [ref=f14e178]:
+        - generic [ref=f14e179]: VOGUE
+        - generic [ref=f14e180]: GRAZIA
+        - generic [ref=f14e181]: BAZAAR
+        - generic [ref=f14e182]: elle
+        - generic [ref=f14e183]: COSMOPOLITAN
+  - contentinfo [ref=f14e184]:
+    - region [ref=f14e185]:
+      - img "Ivory ceramic vessels with dried botanicals" [ref=f14e187]
+      - generic [ref=f14e189]:
+        - heading "Be the first to know" [level=2] [ref=f14e190]
+        - paragraph [ref=f14e191]: New arrivals, exclusive offers and modest style inspiration.
+        - generic [ref=f14e192]:
+          - generic [ref=f14e193]: Email address
+          - textbox "Email address" [ref=f14e194]:
+            - /placeholder: Enter your email
+          - button "Subscribe" [ref=f14e195] [cursor=pointer]
+    - generic [ref=f14e197]:
+      - generic [ref=f14e198]:
+        - generic [ref=f14e199]:
+          - link "NOORE home" [ref=f14e200] [cursor=pointer]:
+            - /url: /
+            - text: NOORE
+          - paragraph [ref=f14e201]: Timeless modest fashion for the modern woman.
+          - list "Social media" [ref=f14e202]:
+            - listitem [ref=f14e203]:
+              - link "Instagram" [ref=f14e204] [cursor=pointer]:
+                - /url: "#instagram"
+            - listitem [ref=f14e209]:
+              - link "Facebook" [ref=f14e210] [cursor=pointer]:
+                - /url: "#facebook"
+            - listitem [ref=f14e213]:
+              - link "TikTok" [ref=f14e214] [cursor=pointer]:
+                - /url: "#tiktok"
+            - listitem [ref=f14e218]:
+              - link "Pinterest" [ref=f14e219] [cursor=pointer]:
+                - /url: "#pinterest"
+        - generic [ref=f14e224]:
+          - heading "Shop" [level=2] [ref=f14e225]
+          - list [ref=f14e226]:
+            - listitem [ref=f14e227]:
+              - link "All Products" [ref=f14e228] [cursor=pointer]:
+                - /url: /shop/all
+            - listitem [ref=f14e229]:
+              - link "Abayas" [ref=f14e230] [cursor=pointer]:
+                - /url: /shop/abayas
+            - listitem [ref=f14e231]:
+              - link "Hijabs" [ref=f14e232] [cursor=pointer]:
+                - /url: /shop/hijabs
+            - listitem [ref=f14e233]:
+              - link "Chadars" [ref=f14e234] [cursor=pointer]:
+                - /url: /shop/chadars
+        - generic [ref=f14e235]:
+          - heading "Customer Care" [level=2] [ref=f14e236]
+          - list [ref=f14e237]:
+            - listitem [ref=f14e238]:
+              - link "Contact Us" [ref=f14e239] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=f14e240]:
+              - link "Shipping & Delivery" [ref=f14e241] [cursor=pointer]:
+                - /url: /shipping-delivery
+            - listitem [ref=f14e242]:
+              - link "Returns & Exchanges" [ref=f14e243] [cursor=pointer]:
+                - /url: /returns-exchanges
+            - listitem [ref=f14e244]:
+              - link "Size Guide" [ref=f14e245] [cursor=pointer]:
+                - /url: /size-guide
+            - listitem [ref=f14e246]:
+              - link "Track Order" [ref=f14e247] [cursor=pointer]:
+                - /url: /track-order
+        - generic [ref=f14e248]:
+          - heading "About" [level=2] [ref=f14e249]
+          - list [ref=f14e250]:
+            - listitem [ref=f14e251]:
+              - link "Our Story" [ref=f14e252] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f14e253]:
+              - link "Sustainability" [ref=f14e254] [cursor=pointer]:
+                - /url: /sustainability
+            - listitem [ref=f14e255]:
+              - link "Privacy Policy" [ref=f14e256] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=f14e257]:
+              - link "Terms & Conditions" [ref=f14e258] [cursor=pointer]:
+                - /url: /terms
+        - generic [ref=f14e259]:
+          - heading "Contact" [level=2] [ref=f14e260]
+          - list [ref=f14e261]:
+            - listitem [ref=f14e262]:
+              - link "+92 300 1234567" [ref=f14e263] [cursor=pointer]:
+                - /url: tel:+923001234567
+            - listitem [ref=f14e264]:
+              - link "hello@noore.com" [ref=f14e265] [cursor=pointer]:
+                - /url: mailto:hello@noore.com
+            - listitem [ref=f14e266]:
+              - link "Lahore, Pakistan" [ref=f14e267] [cursor=pointer]:
+                - /url: /contact
+      - generic [ref=f14e268]:
+        - paragraph [ref=f14e269]: © 2026 NOORE. All rights reserved.
+        - paragraph [ref=f14e270]: VISA · Mastercard · Apple Pay
+  - button "Open Next.js Dev Tools" [ref=f14e276] [cursor=pointer]

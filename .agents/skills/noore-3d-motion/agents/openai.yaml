@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOORE 3D Motion"
+  short_description: "Build explicitly requested 2.5D or 3D"
+  default_prompt: "Use $noore-3d-motion for an explicitly requested advanced 2.5D or genuine 3D NOORE experience."
+policy:
+  allow_implicit_invocation: false

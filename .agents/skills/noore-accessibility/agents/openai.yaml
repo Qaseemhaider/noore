@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOORE Accessibility"
+  short_description: "Audit accessible NOORE ecommerce UX"
+  default_prompt: "Use $noore-accessibility to audit and improve the accessibility of NOORE ecommerce interactions."
+policy:
+  allow_implicit_invocation: true

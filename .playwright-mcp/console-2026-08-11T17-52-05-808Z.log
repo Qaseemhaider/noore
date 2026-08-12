@@ -1,0 +1,10 @@
+[     399ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     485ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  224567ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=_W8tiFkCpCIg85zSdx_nO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  225570ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=_W8tiFkCpCIg85zSdx_nO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  226575ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=_W8tiFkCpCIg85zSdx_nO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  227581ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=_W8tiFkCpCIg85zSdx_nO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  228586ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=_W8tiFkCpCIg85zSdx_nO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  233837ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235290ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235337ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776

@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOORE Visual Audit"
+  short_description: "Audit NOORE layouts against references"
+  default_prompt: "Use $noore-visual-audit to compare the current NOORE implementation with the supplied desktop and mobile references."
+policy:
+  allow_implicit_invocation: true

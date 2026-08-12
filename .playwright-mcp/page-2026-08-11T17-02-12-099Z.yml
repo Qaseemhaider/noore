@@ -1,0 +1,136 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - complementary "Shipping announcement" [ref=f1e3]: Free shipping on orders above PKR 10,000
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - link "NOORE home" [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - text: NOORE
+      - navigation "Primary navigation" [ref=f1e8]:
+        - list [ref=f1e9]:
+          - listitem [ref=f1e10]:
+            - group [ref=f1e11]:
+              - generic "Shop" [ref=f1e12] [cursor=pointer]
+          - listitem [ref=f1e15]:
+            - link "Abayas" [ref=f1e16] [cursor=pointer]:
+              - /url: /shop/abayas
+          - listitem [ref=f1e17]:
+            - link "Hijabs" [ref=f1e18] [cursor=pointer]:
+              - /url: /shop/hijabs
+          - listitem [ref=f1e19]:
+            - link "Chadars" [ref=f1e20] [cursor=pointer]:
+              - /url: /shop/chadars
+          - listitem [ref=f1e21]:
+            - link "About" [ref=f1e22] [cursor=pointer]:
+              - /url: /about
+      - navigation "Account and shopping" [ref=f1e23]:
+        - link "Search" [ref=f1e24] [cursor=pointer]:
+          - /url: /search
+        - link "My account" [ref=f1e28] [cursor=pointer]:
+          - /url: /account
+        - link "Wishlist" [ref=f1e32] [cursor=pointer]:
+          - /url: /wishlist
+        - button "Open cart, 0 items" [ref=f1e35] [cursor=pointer]:
+          - generic [ref=f1e39]: "0"
+  - main [ref=f1e40]:
+    - region [ref=f1e41]:
+      - generic [ref=f1e42]:
+        - paragraph [ref=f1e43]: NOORE
+        - heading "A new chapter is being composed." [level=1] [ref=f1e44]
+        - paragraph [ref=f1e45]: The NOORE collection experience is coming soon.
+  - contentinfo [ref=f1e46]:
+    - region [ref=f1e47]:
+      - generic [ref=f1e48]:
+        - generic [ref=f1e49]:
+          - paragraph [ref=f1e50]: Stay in the loop
+          - heading "Be the first to know" [level=2] [ref=f1e51]
+          - paragraph [ref=f1e52]: New arrivals, exclusive offers and modest style inspiration.
+        - generic [ref=f1e53]:
+          - generic [ref=f1e54]: Email address
+          - textbox "Email address" [ref=f1e55]:
+            - /placeholder: Enter your email
+          - button "Subscribe" [ref=f1e56] [cursor=pointer]
+    - generic [ref=f1e58]:
+      - generic [ref=f1e59]:
+        - generic [ref=f1e60]:
+          - link "NOORE home" [ref=f1e61] [cursor=pointer]:
+            - /url: /
+            - text: NOORE
+          - paragraph [ref=f1e62]: Timeless modest fashion for the modern woman.
+          - list "Social media" [ref=f1e63]:
+            - listitem [ref=f1e64]:
+              - link "Instagram" [ref=f1e65] [cursor=pointer]:
+                - /url: "#instagram"
+            - listitem [ref=f1e70]:
+              - link "Facebook" [ref=f1e71] [cursor=pointer]:
+                - /url: "#facebook"
+            - listitem [ref=f1e74]:
+              - link "TikTok" [ref=f1e75] [cursor=pointer]:
+                - /url: "#tiktok"
+            - listitem [ref=f1e79]:
+              - link "Pinterest" [ref=f1e80] [cursor=pointer]:
+                - /url: "#pinterest"
+        - generic [ref=f1e85]:
+          - heading "Shop" [level=2] [ref=f1e86]
+          - list [ref=f1e87]:
+            - listitem [ref=f1e88]:
+              - link "All Products" [ref=f1e89] [cursor=pointer]:
+                - /url: /shop/all
+            - listitem [ref=f1e90]:
+              - link "Abayas" [ref=f1e91] [cursor=pointer]:
+                - /url: /shop/abayas
+            - listitem [ref=f1e92]:
+              - link "Hijabs" [ref=f1e93] [cursor=pointer]:
+                - /url: /shop/hijabs
+            - listitem [ref=f1e94]:
+              - link "Chadars" [ref=f1e95] [cursor=pointer]:
+                - /url: /shop/chadars
+        - generic [ref=f1e96]:
+          - heading "Customer Care" [level=2] [ref=f1e97]
+          - list [ref=f1e98]:
+            - listitem [ref=f1e99]:
+              - link "Contact Us" [ref=f1e100] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=f1e101]:
+              - link "Shipping & Delivery" [ref=f1e102] [cursor=pointer]:
+                - /url: /shipping-delivery
+            - listitem [ref=f1e103]:
+              - link "Returns & Exchanges" [ref=f1e104] [cursor=pointer]:
+                - /url: /returns-exchanges
+            - listitem [ref=f1e105]:
+              - link "Size Guide" [ref=f1e106] [cursor=pointer]:
+                - /url: /size-guide
+            - listitem [ref=f1e107]:
+              - link "Track Order" [ref=f1e108] [cursor=pointer]:
+                - /url: /track-order
+        - generic [ref=f1e109]:
+          - heading "About" [level=2] [ref=f1e110]
+          - list [ref=f1e111]:
+            - listitem [ref=f1e112]:
+              - link "Our Story" [ref=f1e113] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f1e114]:
+              - link "Sustainability" [ref=f1e115] [cursor=pointer]:
+                - /url: /sustainability
+            - listitem [ref=f1e116]:
+              - link "Privacy Policy" [ref=f1e117] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=f1e118]:
+              - link "Terms & Conditions" [ref=f1e119] [cursor=pointer]:
+                - /url: /terms
+        - generic [ref=f1e120]:
+          - heading "Contact" [level=2] [ref=f1e121]
+          - list [ref=f1e122]:
+            - listitem [ref=f1e123]:
+              - link "+92 300 1234567" [ref=f1e124] [cursor=pointer]:
+                - /url: tel:+923001234567
+            - listitem [ref=f1e125]:
+              - link "hello@noore.com" [ref=f1e126] [cursor=pointer]:
+                - /url: mailto:hello@noore.com
+            - listitem [ref=f1e127]:
+              - link "Lahore, Pakistan" [ref=f1e128] [cursor=pointer]:
+                - /url: /contact
+      - generic [ref=f1e129]:
+        - paragraph [ref=f1e130]: © 2026 NOORE. All rights reserved.
+        - paragraph [ref=f1e131]: VISA · Mastercard · Apple Pay

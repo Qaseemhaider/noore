@@ -1,0 +1,337 @@
+[    1398ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1566ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   13551ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   13599ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   13944ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <DevRootHTTPAccessFallbackBoundary>
+      <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} forbidden={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <Head>
+              <__next_root_layout_boundary__>
+                <SegmentViewNode type="layout" pagePath="layout.tsx">
+                  <SegmentTrieNode>
+                  <link>
+                  <script>
+                  <script>
+                  <RootLayout>
+                    <html lang="en" className="cormorant_...">
+                      <body className="flex min-h...">
+                        <a>
+                        <aside>
+                        <header>
+                        <main>
+                        <SiteFooter>
+                          <footer>
+                            <Newsletter>
+                              <section aria-labelledby="newsletter..." className="grid min-h...">
+                                <div>
+                                <div className="flex items...">
+                                  <div className="w-full max...">
+                                    <h2>
+                                    <p>
+                                    <form className="mt-5 flex ..." action="#newsletter" method="get">
+                                      <label>
+                                      <input
+                                        id="newsletter-email"
+                                        name="email"
+                                        type="email"
+                                        autoComplete="email"
+                                        placeholder="Enter your email"
+                                        className="min-h-11 flex-1 border border-[var(--color-border)] bg-transparent ..."
+-                                       style={{caret-color:"transparent"}}
+                                      >
+                                      ...
+                            ...
+              ...
+ @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[   51451ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   51521ms] [LOG] [Fast Refresh] done in 34ms @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   51742ms] [LOG] [Fast Refresh] done in 34ms @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   70662ms] [LOG] [Fast Refresh] done in 34ms @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   71099ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   71173ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   71458ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <DevRootHTTPAccessFallbackBoundary>
+      <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} forbidden={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <Head>
+              <__next_root_layout_boundary__>
+                <SegmentViewNode type="layout" pagePath="layout.tsx">
+                  <SegmentTrieNode>
+                  <link>
+                  <script>
+                  <script>
+                  <RootLayout>
+                    <html lang="en" className="cormorant_...">
+                      <body className="flex min-h...">
+                        <a>
+                        <aside>
+                        <header>
+                        <main>
+                        <SiteFooter>
+                          <footer>
+                            <Newsletter>
+                              <section aria-labelledby="newsletter..." className="grid min-h...">
+                                <div>
+                                <div className="flex items...">
+                                  <div className="w-full max...">
+                                    <h2>
+                                    <p>
+                                    <form className="mt-5 flex ..." action="#newsletter" method="get">
+                                      <label>
+                                      <input
+                                        id="newsletter-email"
+                                        name="email"
+                                        type="email"
+                                        autoComplete="email"
+                                        placeholder="Enter your email"
+                                        className="min-h-11 flex-1 border border-[var(--color-border)] bg-transparent ..."
+-                                       style={{caret-color:"transparent"}}
+                                      >
+                                      ...
+                            ...
+              ...
+ @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[   85615ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   85689ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   98236ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   98315ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  110448ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  110495ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  130097ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  130163ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  145889ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  146008ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  173875ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  173946ms] [LOG] [Fast Refresh] done in 3ms @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  173982ms] [LOG] [Fast Refresh] done in 3ms @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  174098ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  174140ms] [LOG] [Fast Refresh] done in 17ms @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  187696ms] [LOG] [Fast Refresh] done in 17ms @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  188004ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  188076ms] [LOG] [HMR] connected @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  256848ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  257853ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  258855ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  259859ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  260864ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  265869ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  270871ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  275875ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  280878ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  285882ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  290884ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  295887ms] [ERROR] WebSocket connection to 'ws://localhost:3004/_next/hmr?id=GsFgtxIiLTwmng1s4VbTs' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  353966ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop?_rsc=5CB68i4pnAekjehf:0
+[  353974ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/abayas?_rsc=5CB68i4pnAekjehf:0
+[  353981ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/hijabs?_rsc=5CB68i4pnAekjehf:0
+[  353981ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/chadars?_rsc=5CB68i4pnAekjehf:0
+[  355932ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/haya?_rsc=5CB68i4pnAekjehf:0
+[  355950ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/luna?_rsc=5CB68i4pnAekjehf:0
+[  355959ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/dusk?_rsc=5CB68i4pnAekjehf:0
+[  355961ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/elegance?_rsc=5CB68i4pnAekjehf:0
+[  355976ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/all?_rsc=5CB68i4pnAekjehf:0
+[  356512ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/chiffon?_rsc=5CB68i4pnAekjehf:0
+[  356518ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/chadar?_rsc=5CB68i4pnAekjehf:0
+[  356519ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/jersey?_rsc=5CB68i4pnAekjehf:0
+[  356519ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/linen?_rsc=5CB68i4pnAekjehf:0
+[ 2992225ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop?_rsc=5CB68i4pnAekjehf:0
+[ 2992227ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/abayas?_rsc=5CB68i4pnAekjehf:0
+[ 2992233ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/hijabs?_rsc=5CB68i4pnAekjehf:0
+[ 2994142ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/chadars?_rsc=5CB68i4pnAekjehf:0
+[ 3009149ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/haya?_rsc=5CB68i4pnAekjehf:0
+[ 3009160ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/luna?_rsc=5CB68i4pnAekjehf:0
+[ 3009178ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/dusk?_rsc=5CB68i4pnAekjehf:0
+[ 3009180ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/elegance?_rsc=5CB68i4pnAekjehf:0
+[ 3009204ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/all?_rsc=5CB68i4pnAekjehf:0
+[ 3009970ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/chiffon?_rsc=5CB68i4pnAekjehf:0
+[ 3009971ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/chadar?_rsc=5CB68i4pnAekjehf:0
+[ 3009971ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/jersey?_rsc=5CB68i4pnAekjehf:0
+[ 3009987ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/linen?_rsc=5CB68i4pnAekjehf:0
+[ 3085788ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop?_rsc=5CB68i4pnAekjehf:0
+[ 3085792ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/abayas?_rsc=5CB68i4pnAekjehf:0
+[ 3085795ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/hijabs?_rsc=5CB68i4pnAekjehf:0
+[ 3085801ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/chadars?_rsc=5CB68i4pnAekjehf:0
+[ 3085808ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/all?_rsc=5CB68i4pnAekjehf:0
+[ 3085817ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/haya?_rsc=5CB68i4pnAekjehf:0
+[ 3085823ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/luna?_rsc=5CB68i4pnAekjehf:0
+[ 3088533ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/chiffon?_rsc=5CB68i4pnAekjehf:0
+[ 3088537ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/chadar?_rsc=5CB68i4pnAekjehf:0
+[ 3088858ms] [WARNING] The resource http://localhost:3004/_next/image?url=%2Fimages%2Fhome%2Fhero-temporary.png&w=640&q=75 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[ 3104205ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/haya?_rsc=5CB68i4pnAekjehf:0
+[ 3104206ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/luna?_rsc=5CB68i4pnAekjehf:0
+[ 3104246ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/all?_rsc=5CB68i4pnAekjehf:0
+[ 3104300ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/abayas?_rsc=5CB68i4pnAekjehf:0
+[ 3104301ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/hijabs?_rsc=5CB68i4pnAekjehf:0
+[ 3104301ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/chadars?_rsc=5CB68i4pnAekjehf:0
+[ 3104315ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop?_rsc=5CB68i4pnAekjehf:0
+[ 3141173ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop?_rsc=5CB68i4pnAekjehf:0
+[ 3141176ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/abayas?_rsc=5CB68i4pnAekjehf:0
+[ 3141180ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/hijabs?_rsc=5CB68i4pnAekjehf:0
+[ 3141200ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/chadars?_rsc=5CB68i4pnAekjehf:0
+[ 3141205ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/all?_rsc=5CB68i4pnAekjehf:0
+[ 3141210ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/haya?_rsc=5CB68i4pnAekjehf:0
+[ 3151769ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop?_rsc=5CB68i4pnAekjehf:0
+[ 3151797ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/abayas?_rsc=5CB68i4pnAekjehf:0
+[ 3151799ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/hijabs?_rsc=5CB68i4pnAekjehf:0
+[ 3151803ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/chadars?_rsc=5CB68i4pnAekjehf:0
+[ 3154108ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/haya?_rsc=5CB68i4pnAekjehf:0
+[ 3154108ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/luna?_rsc=5CB68i4pnAekjehf:0
+[ 3154109ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/dusk?_rsc=5CB68i4pnAekjehf:0
+[ 3154121ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/elegance?_rsc=5CB68i4pnAekjehf:0
+[ 3154142ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/shop/all?_rsc=5CB68i4pnAekjehf:0
+[ 3154990ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/chiffon?_rsc=5CB68i4pnAekjehf:0
+[ 3154991ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/chadar?_rsc=5CB68i4pnAekjehf:0
+[ 3154991ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/jersey?_rsc=5CB68i4pnAekjehf:0
+[ 3155007ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/product/linen?_rsc=5CB68i4pnAekjehf:0
+[ 4574683ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4574855ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4576855ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4576911ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4578711ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4578771ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4580386ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/not-found:0
+[ 4580908ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4581013ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4594920ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4594982ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4596530ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4596583ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4597890ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/not-found:0
+[ 4598312ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4598384ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4615366ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4615435ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4617273ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/shop/all?_rsc=64EBvAagmAisvzuu:0
+[ 4617475ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/shop/all:0
+[ 4617613ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4617650ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4617755ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4617834ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 4674342ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4675345ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4676350ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4677354ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4678358ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4683363ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4688366ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4693368ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4698372ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4703376ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4708378ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 4713381ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=707mEcVt2YV4cbyyzROUv' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 5149219ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5149305ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5160673ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5160761ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5163077ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5163174ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5165244ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5165374ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5167211ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/not-found:0
+[ 5167701ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5167768ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5187836ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5187898ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5190073ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5190122ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5201347ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5201436ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5203346ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/shop/all?_rsc=64EBvAagmAisvzuu:0
+[ 5203653ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/shop/all:0
+[ 5203759ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5203797ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5213732ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5213797ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5215666ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/shop/all?_rsc=64EBvAagmAisvzuu:0
+[ 5215905ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/shop/all:0
+[ 5216001ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5216051ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5216245ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5216299ms] [LOG] [HMR] connected @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 5224303ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=DhdAeWNVHavFso3HZg3DW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 5225307ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=DhdAeWNVHavFso3HZg3DW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 5226309ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=DhdAeWNVHavFso3HZg3DW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 5227311ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=DhdAeWNVHavFso3HZg3DW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 5228313ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=DhdAeWNVHavFso3HZg3DW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 5233316ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=DhdAeWNVHavFso3HZg3DW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 5238318ms] [ERROR] WebSocket connection to 'ws://localhost:3007/_next/hmr?id=DhdAeWNVHavFso3HZg3DW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 5278969ms] [WARNING] The resource http://localhost:3006/_next/image?url=%2Fimages%2Fhome%2Fhero-temporary.png&w=640&q=75 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3006/:0
+[ 6344105ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:3007/not-found:0
+[ 6344764ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6344980ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6346540ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6346667ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6349181ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6349276ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6350078ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6350190ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6371091ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:3007/not-found:0
+[ 6371870ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6371944ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6374274ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6374338ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6375196ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6375284ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6391339ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6391431ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6407756ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:3007/not-found:0
+[ 6408583ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6408682ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6423216ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6423295ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6425712ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:3007/shop/all:0
+[ 6425830ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6425898ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6426156ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6426308ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6434003ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6434497ms] [LOG] [Fast Refresh] done in 593ms @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6446319ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6446502ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6460610ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6460794ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6473752ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6473910ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6477061ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6477193ms] [LOG] [HMR] connected @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 6484223ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6485227ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6486230ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6487232ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6488234ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6493242ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6498247ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6503252ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6508254ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6513257ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6518262ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[ 6523272ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3007/_next/hmr?id=jogYFtmVyl8Cs9-EB9W9E' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3007/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256

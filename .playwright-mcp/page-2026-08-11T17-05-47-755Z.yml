@@ -1,0 +1,73 @@
+- generic [active] [ref=f5e1]:
+  - link "Skip to content" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - complementary "Shipping announcement" [ref=f5e3]: Free shipping on orders above PKR 10,000
+  - banner [ref=f5e4]:
+    - generic [ref=f5e5]:
+      - button "Open navigation menu" [ref=f5e7] [cursor=pointer]
+      - link "NOORE home" [ref=f5e10] [cursor=pointer]:
+        - /url: /
+        - text: NOORE
+      - navigation "Account and shopping" [ref=f5e11]:
+        - link "Search" [ref=f5e12] [cursor=pointer]:
+          - /url: /search
+        - button "Open cart, 0 items" [ref=f5e16] [cursor=pointer]:
+          - generic [ref=f5e20]: "0"
+  - main [ref=f5e21]:
+    - region [ref=f5e22]:
+      - generic [ref=f5e23]:
+        - paragraph [ref=f5e24]: NOORE
+        - heading "A new chapter is being composed." [level=1] [ref=f5e25]
+        - paragraph [ref=f5e26]: The NOORE collection experience is coming soon.
+  - contentinfo [ref=f5e27]:
+    - region [ref=f5e28]:
+      - generic [ref=f5e29]:
+        - generic [ref=f5e30]:
+          - paragraph [ref=f5e31]: Stay in the loop
+          - heading "Be the first to know" [level=2] [ref=f5e32]
+          - paragraph [ref=f5e33]: New arrivals, exclusive offers and modest style inspiration.
+        - generic [ref=f5e34]:
+          - generic [ref=f5e35]: Email address
+          - textbox "Email address" [ref=f5e36]:
+            - /placeholder: Enter your email
+          - button "Subscribe" [ref=f5e37] [cursor=pointer]
+    - generic [ref=f5e39]:
+      - generic [ref=f5e41]:
+        - link "NOORE home" [ref=f5e42] [cursor=pointer]:
+          - /url: /
+          - text: NOORE
+        - paragraph [ref=f5e43]: Timeless modest fashion for the modern woman.
+        - list "Social media" [ref=f5e44]:
+          - listitem [ref=f5e45]:
+            - link "Instagram" [ref=f5e46] [cursor=pointer]:
+              - /url: "#instagram"
+          - listitem [ref=f5e51]:
+            - link "Facebook" [ref=f5e52] [cursor=pointer]:
+              - /url: "#facebook"
+          - listitem [ref=f5e55]:
+            - link "TikTok" [ref=f5e56] [cursor=pointer]:
+              - /url: "#tiktok"
+          - listitem [ref=f5e60]:
+            - link "Pinterest" [ref=f5e61] [cursor=pointer]:
+              - /url: "#pinterest"
+      - generic [ref=f5e66]:
+        - group [ref=f5e67]:
+          - generic "Shop" [ref=f5e68] [cursor=pointer]:
+            - text: Shop
+            - generic [ref=f5e69]: +
+        - group [ref=f5e70]:
+          - generic "Customer Care" [ref=f5e71] [cursor=pointer]:
+            - text: Customer Care
+            - generic [ref=f5e72]: +
+        - group [ref=f5e73]:
+          - generic "About" [ref=f5e74] [cursor=pointer]:
+            - text: About
+            - generic [ref=f5e75]: +
+        - group [ref=f5e76]:
+          - generic "Contact" [ref=f5e77] [cursor=pointer]:
+            - text: Contact
+            - generic [ref=f5e78]: +
+      - generic [ref=f5e79]:
+        - paragraph [ref=f5e80]: © 2026 NOORE. All rights reserved.
+        - paragraph [ref=f5e81]: VISA · Mastercard · Apple Pay
+  - alert [ref=f5e82]

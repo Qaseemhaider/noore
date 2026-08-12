@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOORE Motion"
+  short_description: "Build restrained cinematic NOORE motion"
+  default_prompt: "Use $noore-motion to implement a performant, accessible cinematic motion sequence for NOORE."
+policy:
+  allow_implicit_invocation: true

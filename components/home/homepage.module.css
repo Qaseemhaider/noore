@@ -1,0 +1,279 @@
+.hero { position:relative; min-height:clamp(38rem,54vw,48.75rem); overflow:hidden; background:#eee2d2; }
+.hero::after { position:absolute; z-index:0; inset:0; pointer-events:none; content:""; background:linear-gradient(105deg,rgba(255,248,238,.22),rgba(255,255,255,.04)); opacity:0; }
+.heroMedia { position:absolute; inset:0; }
+.heroMedia picture { display:block; width:100%; height:100%; }
+.heroImage { width:100%; height:100%; object-fit:cover; object-position:center; }
+.heroCopy { position:absolute; z-index:1; left:max(var(--gutter),calc((100vw - 80rem)/2 + 3rem)); top:50%; width:25rem; transform:translateY(-50%); }
+.heroTitle { margin:0; font-family:var(--font-display); font-size:clamp(3.5rem,4.7vw,4.75rem); font-weight:500; line-height:.91; letter-spacing:-.035em; }
+.heroLine { display:block; }
+.heroAccent { color:var(--color-crimson); }
+.heroCopy p { width:15rem; margin:1.65rem 0 1.5rem; font-size:.875rem; line-height:1.6; }
+.heroButton { min-width:8.75rem; }
+.scrollCue { position:absolute; z-index:1; bottom:1rem; left:50%; display:flex; min-height:44px; transform:translateX(-50%); align-items:center; gap:.5rem; font-size:.625rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
+.scrollCue span { display:grid; width:1.25rem; height:2rem; place-items:center; border:1px solid currentColor; border-radius:1rem; font-size:.75rem; }
+.worlds,.shelf { padding:4rem var(--gutter); border-bottom:1px solid var(--color-border); }
+.worlds { max-width:90rem; margin:auto; }
+.worlds>h2,.press>h2 { margin:0 0 2rem; text-align:center; font-family:var(--font-display); font-size:1.875rem; font-weight:500; text-transform:uppercase; }
+.worldGrid { display:grid; width:min(100%,80rem); margin-inline:auto; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+.worldCard { position:relative; aspect-ratio:3/4.25; overflow:hidden; color:white; }
+.worldCard img { object-fit:cover; transition:transform .25s ease; }
+.worldCard::after { position:absolute; inset:45% 0 0; content:""; background:linear-gradient(transparent,rgba(0,0,0,.6)); }
+.worldCard:hover img { transform:scale(1.015); }
+.worldName,.worldCta { position:absolute; z-index:1; left:1.5rem; }
+.worldName { bottom:3.75rem; font-family:var(--font-display); font-size:1.75rem; text-transform:uppercase; }
+.worldCta { bottom:1.5rem; font-size:.625rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; }
+.shelf { padding-block:4.25rem; }
+.sectionHead,.productGrid,.dots { width:min(100%,80rem); margin-inline:auto; }
+.sectionHead { display:flex; align-items:end; justify-content:space-between; margin-bottom:1.75rem; }
+.sectionHead h2 { margin:0; font-family:var(--font-display); font-size:1.85rem; font-weight:500; text-transform:uppercase; }
+.sectionHead p { margin:.25rem 0 0; font-size:.75rem; }
+.sectionHead>a { min-height:44px; display:flex; align-items:center; color:var(--color-crimson); font-size:.7rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+.productGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+.productCard { position:relative; min-width:0; }
+.productImage { position:relative; display:block; aspect-ratio:4/5; overflow:hidden; background:var(--color-surface-muted); }
+.productImage img { object-fit:cover; }
+.wishlist { position:absolute; top:.4rem; right:.35rem; display:grid; width:44px; height:44px; place-items:center; }
+.productCard h3 { margin:.8rem 0 .2rem; font-size:.7rem; font-weight:600; letter-spacing:.01em; text-transform:uppercase; }
+.productCard data { font-size:.7rem; font-weight:500; }
+.dots { display:flex; justify-content:center; gap:.65rem; margin-top:2rem; }
+.dots i { width:.5rem; height:.5rem; border-radius:50%; background:var(--color-border); }
+.dots i:first-child { background:var(--color-crimson); }
+.trust { display:grid; grid-template-columns:repeat(4,1fr); border-bottom:1px solid var(--color-border); background:rgba(239,232,222,.42); padding:2.5rem max(var(--gutter),calc((100vw - 85rem)/2 + 4rem)); }
+.trustItem { display:flex; align-items:center; gap:1rem; padding-inline:1.25rem; }
+.trustItem svg { width:2rem; flex:0 0 auto; fill:none; stroke:var(--color-muted); stroke-linecap:round; stroke-linejoin:round; stroke-width:1.2; }
+.trustItem h2 { margin:0; font-size:.68rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; }
+.trustItem p { margin:.2rem 0 0; font-size:.65rem; }
+.press { padding:4rem var(--gutter) 4.75rem; border-bottom:1px solid var(--color-border); }
+.press>div { display:flex; max-width:70rem; margin:auto; align-items:center; justify-content:space-between; gap:2rem; color:#494744; }
+.press span { font-family:var(--font-display); font-size:clamp(1.7rem,3vw,2.8rem); }
+
+@media (max-width:47.999rem) {
+  .productCard { transition:opacity 520ms var(--ease-out); }
+  .hero { min-height:34rem; background:var(--color-warm-ivory); }
+  .heroCopy { top:1.65rem; left:1rem; right:1rem; width:auto; transform:none; text-align:center; }
+  .heroTitle { font-size:2.4rem; line-height:.91; }
+  .heroCopy p { width:14rem; margin:.85rem auto .7rem; font-size:.76rem; line-height:1.5; }
+  .heroButton { min-width:7.75rem; }
+  .scrollCue { bottom:.75rem; color:white; }
+  .worlds { padding:2.25rem .75rem 2.1rem; }
+  .shelf { padding:2.15rem 1rem 2.25rem; }
+  .worlds>h2,.press>h2 { margin-bottom:1rem; font-size:1.32rem; }
+  .worldGrid { gap:.55rem; }
+  .worldCard { overflow:visible; aspect-ratio:1; margin-bottom:1.5rem; border-radius:50%; }
+  .worldCard img { border-radius:50%; }
+  .worldCard::after,.worldCta { display:none; }
+  .worldName { bottom:-1.45rem; left:50%; color:var(--color-obsidian); font-family:var(--font-ui); font-size:.64rem; font-weight:650; letter-spacing:.02em; transform:translateX(-50%); white-space:nowrap; }
+  .sectionHead { margin-bottom:.85rem; }
+  .sectionHead h2 { font-size:1.28rem; }
+  .sectionHead p { display:none; }
+  .sectionHead>a { font-size:.66rem; }
+  .productGrid { display:flex; gap:.75rem; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
+  .productGrid::-webkit-scrollbar { display:none; }
+  .productCard { flex:0 0 calc((100% - .75rem)/2); scroll-snap-align:start; }
+  .arrivalsShelf .productImage { aspect-ratio:1/1.08; }
+  .productCard h3 { min-height:2.8em; margin:.65rem 0 .15rem; font-size:.7rem; line-height:1.4; }
+  .productCard data { font-size:.68rem; }
+  .dots { margin-top:1.05rem; }
+  .dots i { width:.42rem; height:.42rem; }
+  .dots i:nth-child(n+5) { display:none; }
+  .trust { grid-template-columns:1fr; padding:0 1rem; }
+  .trustItem { min-height:5.25rem; padding:.8rem .35rem; border-bottom:1px solid var(--color-border); }
+  .trustItem:last-child { border-bottom:0; }
+  .press { padding:2.35rem 1rem 2.5rem; }
+  .press>div { display:grid; grid-template-columns:repeat(6,1fr); column-gap:.6rem; row-gap:.8rem; text-align:center; }
+  .press span { grid-column:span 2; font-size:1.35rem; white-space:nowrap; }
+  .press span:nth-child(4) { grid-column:2 / span 2; }
+}
+
+/* Phase 2B.2 motion: first-frame entrance is SSR/CSS-owned. Animations attach
+   paused so the CSS animation clock holds at currentTime 0 until hydration;
+   only html[data-home-motion="entered"] flips play-state to running. Fill is
+   backwards-only so a completed entrance releases control to the scroll rules
+   below instead of locking transform/opacity at the final keyframe. */
+.heroEntranceLine { animation:hero-line-ssr 500ms backwards var(--ease-out); }
+.heroEntranceLine:nth-child(1) { animation-delay:150ms; }
+.heroEntranceLine:nth-child(2) { animation-delay:300ms; }
+.heroEntranceLine:nth-child(3) { animation-delay:450ms; }
+.heroEntranceCopy { animation:hero-copy-ssr 420ms backwards var(--ease-out) 650ms; }
+.heroEntranceCta { animation:hero-copy-ssr 400ms backwards var(--ease-out) 800ms; }
+.heroEntranceMedia { animation:hero-media-ssr 700ms backwards var(--ease-out) 700ms; }
+.heroEntranceLine,
+.heroEntranceCopy,
+.heroEntranceCta,
+.heroEntranceMedia {
+  animation-play-state: paused;
+  animation-timing-function: var(--ease-out);
+  animation-fill-mode: backwards;
+}
+:global(html[data-home-motion="entered"]) .heroEntranceLine,
+:global(html[data-home-motion="entered"]) .heroEntranceCopy,
+:global(html[data-home-motion="entered"]) .heroEntranceCta,
+:global(html[data-home-motion="entered"]) .heroEntranceMedia,
+:global(html[data-home-motion="entered"]) .hero::after { animation-play-state:running; }
+
+@keyframes hero-line-ssr { from { opacity:0; transform:translate3d(0,22px,0); clip-path:inset(0 0 100% 0); } to { opacity:1; transform:none; clip-path:inset(0); } }
+@keyframes hero-copy-ssr { from { opacity:0; transform:translate3d(0,14px,0); } to { opacity:1; transform:none; } }
+@keyframes hero-media-ssr { from { opacity:.12; transform:translate3d(0,14px,0) scale(1.01); clip-path:inset(0 0 5% 0); } to { opacity:1; transform:none; clip-path:inset(0); } }
+
+.hero::after {
+  background:linear-gradient(105deg,rgba(255,248,238,.96),rgba(255,248,238,.82) 55%,rgba(255,255,255,.38));
+  animation:hero-atmosphere-ssr 780ms backwards var(--ease-out) 520ms;
+  animation-play-state:paused;
+}
+@keyframes hero-atmosphere-ssr { from { opacity:.95; } to { opacity:0; } }
+
+:global(html[data-home-motion="entered"]) .heroLine { opacity:calc(1 - var(--hero-progress,0) * .82); transform:translate3d(0,calc(var(--hero-progress,0) * -18px),0); clip-path:inset(0); }
+:global(html[data-home-motion="entered"]) .heroCopy p { opacity:calc(1 - var(--hero-progress,0) * .94); transform:translate3d(0,calc(var(--hero-progress,0) * -13px),0); }
+:global(html[data-home-motion="entered"]) .heroButton { opacity:calc(1 - var(--hero-progress,0)); transform:translate3d(0,calc(var(--hero-progress,0) * -9px),0); }
+:global(html[data-home-motion="entered"]) .heroMedia { opacity:1; transform:translate3d(0,var(--hero-media-depth,0px),0); clip-path:inset(0); }
+
+:global(html[data-home-motion="entered"]) .motionReveal[data-home-motion-item] {
+  --p:var(--item-progress,0);
+  opacity:var(--p);
+}
+
+/* The surface resolves before foreground choreography without changing geometry. */
+.worlds,.shelf,.trust,.press { isolation:isolate; }
+.worlds::before,.shelf::before,.trust::after,.press::before {
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  pointer-events:none;
+  content:"";
+  background:linear-gradient(118deg,rgba(255,255,255,.42),rgba(117,26,36,.025));
+  opacity:calc((1 - clamp(0,var(--section-progress,1) * 2.2,1)) * .72);
+}
+.worlds,.shelf,.press { position:relative; }
+
+/* Editorial card sequence: a mask, depth settle and staggered perspective. */
+:global(html[data-home-motion="entered"]) .worlds[data-home-reveal="worlds"] > h2 {
+  transform:translate3d(0,calc((1 - var(--p)) * 20px),0);
+  clip-path:inset(calc((1 - var(--p)) * 100%) 0 0);
+}
+:global(html[data-home-motion="entered"]) [data-home-reveal="worlds"] .worldCard {
+  transform:perspective(900px) translate3d(0,calc((1 - var(--p)) * 34px - var(--section-exit,0) * 8px),0) rotateX(calc((1 - var(--p)) * 2.4deg)) scale(calc(.955 + var(--p) * .045 - var(--section-exit,0) * .008));
+  clip-path:inset(calc((1 - var(--p)) * 17%) 0 0);
+  transform-origin:center bottom;
+}
+:global(html[data-home-motion="entered"]) [data-home-reveal="worlds"] .worldCard img { transform:scale(calc(1.035 - var(--p) * .035 + var(--section-exit,0) * .008)); }
+
+/* Product shelves share structure, but arrivals approach laterally. */
+:global(html[data-home-motion="entered"]) [data-home-reveal="signature"] .sectionHead,
+:global(html[data-home-motion="entered"]) [data-home-reveal="arrivals"] .sectionHead {
+  transform:translate3d(0,calc((1 - var(--p)) * 18px),0);
+  clip-path:inset(0 0 calc((1 - var(--p)) * 100%) 0);
+  opacity:1;
+}
+:global(html[data-home-motion="entered"]) [data-home-reveal] .sectionHead > div { opacity:var(--p); }
+:global(html[data-home-motion="entered"]) [data-home-reveal] .sectionHead > a {
+  opacity:var(--secondary-progress,0);
+  transform:translate3d(0,calc((1 - var(--secondary-progress,0)) * 8px),0);
+}
+:global(html[data-home-motion="entered"]) [data-home-reveal="signature"] .productCard {
+  opacity:1;
+  transform:translate3d(0,calc((1 - var(--p)) * 26px),0) scale(calc(.975 + var(--p) * .025));
+}
+:global(html[data-home-motion="entered"]) [data-home-reveal="signature"] .productImage { opacity:var(--p); clip-path:inset(calc((1 - var(--p)) * 16%) 0 0); }
+:global(html[data-home-motion="entered"]) [data-home-reveal="signature"] .productImage img { transform:scale(calc(1.03 - var(--p) * .03)); }
+:global(html[data-home-motion="entered"]) [data-home-reveal="arrivals"] .productCard {
+  opacity:1;
+  transform:translate3d(calc((1 - var(--p)) * 22px),calc((1 - var(--p)) * 9px),0) scale(calc(.98 + var(--p) * .02));
+}
+:global(html[data-home-motion="entered"]) [data-home-reveal="arrivals"] .productImage { opacity:var(--p); clip-path:inset(0 calc((1 - var(--p)) * 13%) 0 0); }
+:global(html[data-home-motion="entered"]) [data-home-reveal="arrivals"] .productImage img { transform:scale(calc(1.025 - var(--p) * .025)); }
+:global(html[data-home-motion="entered"]) [data-home-reveal] .productCard .wishlist { opacity:var(--p); }
+:global(html[data-home-motion="entered"]) [data-home-reveal] .productCard h3,
+:global(html[data-home-motion="entered"]) [data-home-reveal] .productCard data {
+  opacity:var(--metadata-progress,0);
+  transform:translate3d(0,calc((1 - var(--metadata-progress,0)) * 7px),0);
+}
+:global(html[data-home-motion="entered"]) [data-home-reveal] .dots { transform:translate3d(0,calc((1 - var(--p)) * 8px),0); }
+
+.trust::before { position:absolute; inset:0 0 auto; height:1px; content:""; background:var(--color-border); transform:scaleX(var(--section-progress,1)); transform-origin:left; }
+.trust { position:relative; }
+:global(html[data-home-motion="entered"]) .trustItem {
+  opacity:clamp(0,calc(var(--p) - var(--section-exit,0) * .16),1);
+  transform:translate3d(0,calc((1 - var(--p)) * 11px - var(--section-exit,0) * 3px),0);
+}
+
+:global(html[data-home-motion="entered"]) .press[data-home-reveal="press"] > h2 { transform:translate3d(0,calc((1 - var(--p)) * 13px),0); }
+:global(html[data-home-motion="entered"]) .press[data-home-reveal="press"] span {
+  opacity:clamp(0,calc(var(--p) - var(--section-exit,0) * .18),1);
+  filter:blur(calc((1 - var(--p)) * 4px));
+  transform:translate3d(0,calc((1 - var(--p)) * 12px - var(--section-exit,0) * 3px),0);
+}
+
+.dots i { transition:background-color 180ms ease,transform 180ms var(--ease-out); }
+.dots i[data-active="true"] { background:var(--color-crimson); transform:scale(1.18); }
+.dots i[data-active="false"] { background:var(--color-border); transform:scale(1); }
+
+@media (hover:hover) { .worldCard:hover img { transform:scale(1.015); } }
+
+@media (max-width:47.999rem) {
+  .heroEntranceLine { animation-duration:350ms; }
+  .heroEntranceLine:nth-child(1) { animation-delay:100ms; }
+  .heroEntranceLine:nth-child(2) { animation-delay:260ms; }
+  .heroEntranceLine:nth-child(3) { animation-delay:420ms; }
+  .heroEntranceCopy { animation-duration:360ms; animation-delay:530ms; }
+  .heroEntranceCta { animation-duration:360ms; animation-delay:630ms; }
+  .heroEntranceMedia { animation-duration:620ms; animation-delay:740ms; }
+  .hero::after { animation-duration:620ms; animation-delay:560ms; }
+  :global(html[data-home-motion="entered"]) .heroLine { transform:translate3d(0,calc(var(--hero-progress,0) * -8px),0); }
+  :global(html[data-home-motion="entered"]) .heroCopy p { transform:translate3d(0,calc(var(--hero-progress,0) * -6px),0); }
+  :global(html[data-home-motion="entered"]) .heroButton { transform:translate3d(0,calc(var(--hero-progress,0) * -4px),0); }
+
+  :global(html[data-home-motion="entered"]) [data-home-reveal="worlds"] .worldCard {
+    transform:translate3d(0,calc((1 - var(--p)) * 11px),0) scale(calc(.94 + var(--p) * .06));
+    clip-path:none;
+  }
+  :global(html[data-home-motion="entered"]) [data-home-reveal="worlds"] .worldCard img { transform:none; }
+  :global(html[data-home-motion="entered"]) [data-home-reveal="signature"] .productCard { transform:translate3d(0,calc((1 - var(--p)) * 12px),0) scale(calc(.985 + var(--p) * .015)); }
+  :global(html[data-home-motion="entered"]) [data-home-reveal="arrivals"] .productCard { transform:translate3d(calc((1 - var(--p)) * 10px),calc((1 - var(--p)) * 5px),0); }
+  :global(html[data-home-motion="entered"]) [data-home-shelf] .productCard[data-shelf-visible="false"] { opacity:0; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .heroEntranceLine,
+  .heroEntranceCopy,
+  .heroEntranceCta,
+  .heroEntranceMedia,
+  :global(html[data-home-motion="reduced"]) .motionReveal[data-home-motion-item],
+  :global(html[data-home-motion="reduced"]) .heroLine,
+  :global(html[data-home-motion="reduced"]) .heroCopy p,
+  :global(html[data-home-motion="reduced"]) .heroButton,
+  :global(html[data-home-motion="reduced"]) .heroMedia,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .sectionHead,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .sectionHead > div,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .sectionHead > a,
+  :global(html[data-home-motion="reduced"]) .worlds[data-home-reveal] > h2,
+  :global(html[data-home-motion="reduced"]) .press[data-home-reveal] > h2,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .worldCard,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .productCard,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .productImage,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .productImage img,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .worldCard img,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .dots,
+  :global(html[data-home-motion="reduced"]) .dot,
+  :global(html[data-home-motion="reduced"]) .trustItem,
+  :global(html[data-home-motion="reduced"]) .press span,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .productCard .wishlist,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .productCard h3,
+  :global(html[data-home-motion="reduced"]) [data-home-reveal] .productCard data,
+  :global(html[data-home-motion="reduced"]) [data-home-shelf] .productCard[data-shelf-visible="false"],
+  .trust::before {
+    opacity:1;
+    filter:none;
+    transform:none;
+    clip-path:none;
+    animation:none;
+  }
+  .hero::after,
+  .worlds::before,
+  .shelf::before,
+  .trust::after,
+  .press::before {
+    opacity:0;
+    animation:none;
+    transform:none;
+  }
+}

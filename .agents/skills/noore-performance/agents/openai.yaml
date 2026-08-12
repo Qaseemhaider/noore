@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOORE Performance"
+  short_description: "Audit NOORE ecommerce performance"
+  default_prompt: "Use $noore-performance to audit and improve NOORE performance without compromising visual fidelity."
+policy:
+  allow_implicit_invocation: true
