@@ -99,6 +99,11 @@ body[data-navigation-open="true"] {
   outline-offset: 3px;
 }
 
+.noore-search-focus:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-crimson);
+}
+
 a {
   color: inherit;
   text-decoration: none;

@@ -2,6 +2,7 @@ import { Price } from "@/components/ui/price";
 import Link from "next/link";
 import Image from "next/image";
 import { Product } from "@/lib/catalog-data";
+import { WishlistButton } from "@/components/product/wishlist-button";
 
 type ProductCardProps = {
   product: Product;
@@ -9,7 +10,10 @@ type ProductCardProps = {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="group flex flex-col">
+    <div className="group flex flex-col relative">
+      <div className="absolute top-[var(--space-2)] right-[var(--space-2)] z-10">
+        <WishlistButton productId={product.id} />
+      </div>
       <Link href={`/product/${product.slug}`} className="block overflow-hidden bg-[var(--color-surface-muted)] mb-[var(--space-4)]">
         <Image
           src={product.image.src}

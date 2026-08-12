@@ -11,9 +11,11 @@ import { DesktopNavigation } from "./desktop-navigation";
 import { MobileNavigation } from "./mobile-navigation";
 import { Wordmark } from "./wordmark";
 import { useCart } from "@/lib/cart-context";
+import { useSearch } from "@/lib/search-context";
 
 export function SiteHeader() {
-  const { items, setIsOpen } = useCart();
+  const { items, setIsOpen: setCartIsOpen } = useCart();
+  const { setIsOpen: setSearchIsOpen } = useSearch();
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -27,10 +29,10 @@ export function SiteHeader() {
           <DesktopNavigation />
         </div>
         <nav aria-label="Account and shopping" className="flex items-center justify-self-end">
-          <Link prefetch={false} href="/search" aria-label="Search" className="flex size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)]"><SearchIcon /></Link>
+          <button type="button" aria-label="Search" onClick={() => setSearchIsOpen(true)} className="flex size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)]"><SearchIcon /></button>
           <Link prefetch={false} href="/account" aria-label="My account" className="hidden size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)] sm:flex"><AccountIcon /></Link>
           <Link prefetch={false} href="/wishlist" aria-label="Wishlist" className="hidden size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)] lg:flex"><HeartIcon /></Link>
-          <button type="button" onClick={() => setIsOpen(true)} aria-label={`Open cart, ${itemCount} items`} className="relative flex size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)]">
+          <button type="button" onClick={() => setCartIsOpen(true)} aria-label={`Open cart, ${itemCount} items`} className="relative flex size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)]">
             <BagIcon />
             <span aria-hidden="true" className="absolute right-0.5 top-0.5 flex size-4 items-center justify-center rounded-full bg-[var(--color-crimson)] text-[0.55rem] font-bold text-white">{itemCount}</span>
           </button>

@@ -4,7 +4,10 @@ import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { CartProvider } from "@/lib/cart-context";
+import { WishlistProvider } from "@/lib/wishlist-context";
+import { SearchProvider } from "@/lib/search-context";
 import { CartDrawer } from "@/components/layout/cart-drawer";
+import { SearchOverlay } from "@/components/layout/search-overlay";
 import "./globals.css";
 
 const displayFont = Cormorant_Garamond({
@@ -39,13 +42,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <CartProvider>
-          <AnnouncementBar />
-          <SiteHeader />
-          <main id="main-content" tabIndex={-1}>
-            {children}
-          </main>
-          <SiteFooter />
-          <CartDrawer />
+          <WishlistProvider>
+            <SearchProvider>
+              <AnnouncementBar />
+              <SiteHeader />
+              <main id="main-content" tabIndex={-1}>
+                {children}
+              </main>
+              <SiteFooter />
+              <CartDrawer />
+              <SearchOverlay />
+            </SearchProvider>
+          </WishlistProvider>
         </CartProvider>
         <noscript>
           <style>{`[data-home-hero] [data-home-entrance],[data-home-hero] a,[data-home-hero]::after{animation-play-state:running!important}`}</style>

@@ -12,6 +12,7 @@ import {
   InstagramIcon,
   MenuIcon,
   PinterestIcon,
+  SearchIcon,
   TikTokIcon,
 } from "@/components/icons";
 import { IconButton } from "@/components/ui/icon-button";
@@ -159,6 +160,7 @@ export function MobileNavigation() {
           </ul>
 
           <ul className="border-b border-[var(--color-border)] py-4">
+            <li><Link prefetch={false} href="/search" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><SearchIcon /> Search</Link></li>
             <li><Link prefetch={false} href="/account" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><AccountIcon /> My Account</Link></li>
             <li><Link prefetch={false} href="/wishlist" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><HeartIcon /> Wishlist</Link></li>
             <li><button type="button" onClick={closeMenu} className="flex min-h-11 w-full items-center gap-4 text-xs font-semibold uppercase"><BagIcon /> My Cart <span className="text-[var(--color-crimson)]">(0)</span></button></li>
