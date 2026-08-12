@@ -30,14 +30,14 @@ export const homeWorlds = [
 ] as const;
 
 export const homeProducts: Record<string, HomeProduct> = {
-  haya: { id: "haya", name: "Noore-e-Haya Abaya", price: 1290000, image: { src: "/images/home/product-brown-temporary.png", alt: "Chocolate brown Noore-e-Haya abaya" } },
-  luna: { id: "luna", name: "Luna Abaya", price: 1150000, image: { src: "/images/home/product-black-temporary.png", alt: "Black Luna abaya" } },
-  dusk: { id: "dusk", name: "Dusk Embroidered Abaya", price: 1390000, image: { src: "/images/home/product-black-temporary.png", alt: "Black embroidered Dusk abaya" } },
-  elegance: { id: "elegance", name: "Elegance Abaya", price: 1250000, image: { src: "/images/home/product-taupe-temporary.png", alt: "Taupe Elegance abaya" } },
-  chiffon: { id: "chiffon", name: "Chiffon Hijab", price: 185000, image: { src: "/images/home/product-rose-temporary.png", alt: "Dusty rose chiffon hijab" } },
-  chadar: { id: "chadar", name: "Noore Chadar", price: 245000, image: { src: "/images/home/product-taupe-temporary.png", alt: "Taupe Noore chadar" } },
-  jersey: { id: "jersey", name: "Premium Jersey Hijab", price: 195000, image: { src: "/images/home/product-black-temporary.png", alt: "Black premium jersey hijab" } },
-  linen: { id: "linen", name: "Linen Abaya", price: 1190000, image: { src: "/images/home/product-brown-temporary.png", alt: "Brown linen abaya" } },
+  haya: { id: "haya", name: "Noore-e-Haya Abaya", price: 12900, image: { src: "/images/home/product-brown-temporary.png", alt: "Chocolate brown Noore-e-Haya abaya" } },
+  luna: { id: "luna", name: "Luna Abaya", price: 11500, image: { src: "/images/home/product-black-temporary.png", alt: "Black Luna abaya" } },
+  dusk: { id: "dusk", name: "Dusk Embroidered Abaya", price: 13900, image: { src: "/images/home/product-black-temporary.png", alt: "Black embroidered Dusk abaya" } },
+  elegance: { id: "elegance", name: "Elegance Abaya", price: 12500, image: { src: "/images/home/product-taupe-temporary.png", alt: "Taupe Elegance abaya" } },
+  chiffon: { id: "chiffon", name: "Chiffon Hijab", price: 1850, image: { src: "/images/home/product-rose-temporary.png", alt: "Dusty rose chiffon hijab" } },
+  chadar: { id: "chadar", name: "Noore Chadar", price: 2450, image: { src: "/images/home/product-taupe-temporary.png", alt: "Taupe Noore chadar" } },
+  jersey: { id: "jersey", name: "Premium Jersey Hijab", price: 1950, image: { src: "/images/home/product-black-temporary.png", alt: "Black premium jersey hijab" } },
+  linen: { id: "linen", name: "Linen Abaya", price: 11900, image: { src: "/images/home/product-brown-temporary.png", alt: "Brown linen abaya" } },
 };
 
 export const signatureProductIds = ["haya", "luna", "dusk", "elegance"];

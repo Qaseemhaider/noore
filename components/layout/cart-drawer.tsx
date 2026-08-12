@@ -5,12 +5,19 @@ import { CloseIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { formatPrice } from "@/lib/format-price";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export function CartDrawer() {
   const { items, isOpen, setIsOpen, removeFromCart, updateQuantity, subtotal } = useCart();
   const SHIPPING_THRESHOLD = 10000;
+  const router = useRouter();
 
   if (!isOpen) return null;
+
+  const handleCheckout = () => {
+    setIsOpen(false);
+    router.push('/checkout/information');
+  };
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
@@ -59,7 +66,7 @@ export function CartDrawer() {
             <span>Subtotal</span>
             <span>{formatPrice(subtotal)}</span>
           </div>
-          <Button className="mt-6 w-full">Checkout</Button>
+          <Button onClick={handleCheckout} className="mt-6 w-full">Checkout</Button>
         </footer>
       </div>
     </div>

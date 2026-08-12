@@ -16,9 +16,9 @@ export function Price({
   return (
     <data
       className={`type-price ${className}`}
-      value={(amount / 100).toFixed(2)}
+      value={amount.toFixed(2)}
     >
-      {formatPrice(amount / 100, currency, locale)}
+      {formatPrice(amount, currency, locale)}
     </data>
   );
 }

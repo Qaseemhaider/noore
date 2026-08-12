@@ -8,6 +8,7 @@ import { WishlistProvider } from "@/lib/wishlist-context";
 import { SearchProvider } from "@/lib/search-context";
 import { CartDrawer } from "@/components/layout/cart-drawer";
 import { SearchOverlay } from "@/components/layout/search-overlay";
+import { CheckoutProvider } from "@/lib/checkout-context";
 import "./globals.css";
 
 const displayFont = Cormorant_Garamond({
@@ -44,14 +45,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <CartProvider>
           <WishlistProvider>
             <SearchProvider>
-              <AnnouncementBar />
-              <SiteHeader />
-              <main id="main-content" tabIndex={-1}>
-                {children}
-              </main>
-              <SiteFooter />
-              <CartDrawer />
-              <SearchOverlay />
+              <CheckoutProvider>
+                <AnnouncementBar />
+                <SiteHeader />
+                <main id="main-content" tabIndex={-1}>
+                  {children}
+                </main>
+                <SiteFooter />
+                <CartDrawer />
+                <SearchOverlay />
+              </CheckoutProvider>
             </SearchProvider>
           </WishlistProvider>
         </CartProvider>

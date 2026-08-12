@@ -1,4 +1,5 @@
 'use client';
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   AccountIcon,
@@ -16,7 +17,9 @@ import { useSearch } from "@/lib/search-context";
 export function SiteHeader() {
   const { items, setIsOpen: setCartIsOpen } = useCart();
   const { setIsOpen: setSearchIsOpen } = useSearch();
-  const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => setIsMounted(true), []);
+  const itemCount = isMounted ? items.reduce((sum, item) => sum + item.quantity, 0) : 0;
 
   return (
     <header className="home-entrance-header relative z-[var(--z-header)] border-b border-[var(--color-border)] bg-[var(--color-soft-cream)]">
