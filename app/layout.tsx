@@ -3,6 +3,8 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { CartProvider } from "@/lib/cart-context";
+import { CartDrawer } from "@/components/layout/cart-drawer";
 import "./globals.css";
 
 const displayFont = Cormorant_Garamond({
@@ -36,12 +38,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a className="skip-link type-button" href="#main-content">
           Skip to content
         </a>
-        <AnnouncementBar />
-        <SiteHeader />
-        <main id="main-content" tabIndex={-1}>
-          {children}
-        </main>
-        <SiteFooter />
+        <CartProvider>
+          <AnnouncementBar />
+          <SiteHeader />
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
+          <SiteFooter />
+          <CartDrawer />
+        </CartProvider>
         <noscript>
           <style>{`[data-home-hero] [data-home-entrance],[data-home-hero] a,[data-home-hero]::after{animation-play-state:running!important}`}</style>
         </noscript>

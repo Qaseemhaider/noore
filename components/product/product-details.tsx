@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Price } from "@/components/ui/price";
 import { Accordion } from "@/components/ui/accordion";
 import { StickyAddToCartBar } from "./sticky-add-to-bag";
+import { useCart } from "@/lib/cart-context";
 
 interface ProductDetailsProps {
   product: Product;
@@ -43,6 +44,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
   const [quantity, setQuantity] = useState(1);
   const purchaseAreaRef = useRef<HTMLDivElement>(null);
   const [isPurchaseAreaVisible, setIsPurchaseAreaVisible] = useState(true);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,7 +60,16 @@ export function ProductDetails({ product }: ProductDetailsProps) {
   }, []);
 
   const handleAddToCart = () => {
-    console.log("Adding to bag:", { product: product.id, color: selectedColor, size: selectedSize, quantity });
+    addToCart({
+      id: product.id,
+      slug: product.slug,
+      name: product.name,
+      image: product.images[0],
+      price: product.price,
+      size: selectedSize,
+      color: selectedColor,
+      quantity,
+    });
   };
 
   return (
