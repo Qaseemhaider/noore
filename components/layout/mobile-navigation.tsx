@@ -23,6 +23,7 @@ import {
 } from "@/lib/navigation";
 import { Wordmark } from "./wordmark";
 import { useCart } from "@/lib/cart-context";
+import { useIsAuthenticated } from "@/lib/use-auth";
 
 const socialIcons = [
   InstagramIcon,
@@ -38,6 +39,7 @@ export function MobileNavigation() {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const shopId = useId();
   const { setIsOpen: setCartIsOpen } = useCart();
+  const isAuthenticated = useIsAuthenticated();
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -163,7 +165,7 @@ export function MobileNavigation() {
 
           <ul className="border-b border-[var(--color-border)] py-4">
             <li><Link prefetch={false} href="/search" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><SearchIcon /> Search</Link></li>
-            <li><Link prefetch={false} href="/account" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><AccountIcon /> My Account</Link></li>
+            <li><Link prefetch={false} href={isAuthenticated ? "/account" : "/login"} onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><AccountIcon /> {isAuthenticated ? "My Account" : "Sign In"}</Link></li>
             <li><Link prefetch={false} href="/wishlist" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><HeartIcon /> Wishlist</Link></li>
             <li><button type="button" onClick={() => { closeMenu(); setCartIsOpen(true); }} className="flex min-h-11 w-full items-center gap-4 text-xs font-semibold uppercase"><BagIcon /> My Cart <span className="text-[var(--color-crimson)]">(0)</span></button></li>
           </ul>

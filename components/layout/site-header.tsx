@@ -13,11 +13,13 @@ import { MobileNavigation } from "./mobile-navigation";
 import { Wordmark } from "./wordmark";
 import { useCart } from "@/lib/cart-context";
 import { useSearch } from "@/lib/search-context";
+import { useIsAuthenticated } from "@/lib/use-auth";
 
 export function SiteHeader() {
   const { items, setIsOpen: setCartIsOpen } = useCart();
   const { setIsOpen: setSearchIsOpen } = useSearch();
   const [isMounted, setIsMounted] = useState(false);
+  const isAuthenticated = useIsAuthenticated();
   useEffect(() => setIsMounted(true), []);
   const itemCount = isMounted ? items.reduce((sum, item) => sum + item.quantity, 0) : 0;
 
@@ -33,7 +35,7 @@ export function SiteHeader() {
         </div>
         <nav aria-label="Account and shopping" className="flex items-center justify-self-end">
           <button type="button" aria-label="Search" onClick={() => setSearchIsOpen(true)} className="flex size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)]"><SearchIcon /></button>
-          <Link prefetch={false} href="/account" aria-label="My account" className="hidden size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)] sm:flex"><AccountIcon /></Link>
+          <Link prefetch={false} href={isAuthenticated ? "/account" : "/login"} aria-label={isAuthenticated ? "My account" : "Sign in"} className="hidden size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)] sm:flex"><AccountIcon /></Link>
           <Link prefetch={false} href="/wishlist" aria-label="Wishlist" className="hidden size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)] lg:flex"><HeartIcon /></Link>
           <button type="button" onClick={() => setCartIsOpen(true)} aria-label={`Open cart, ${itemCount} items`} className="relative flex size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)]">
             <BagIcon />
