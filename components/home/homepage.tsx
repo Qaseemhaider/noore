@@ -4,15 +4,13 @@ import { HeartIcon } from "@/components/icons";
 import { HomeMotion } from "@/components/motion/home-motion";
 import { ButtonLink } from "@/components/ui/button";
 import { Price } from "@/components/ui/price";
+import type { Product } from "@/lib/catalog-data";
+import { getHomepageShelves } from "@/lib/catalog/queries";
 import {
   homeHero,
-  homeProducts,
   homeWorlds,
-  newArrivalProductIds,
   pressMarks,
-  signatureProductIds,
   trustItems,
-  type HomeProduct,
 } from "@/lib/homepage-data";
 import styles from "./homepage.module.css";
 
@@ -51,7 +49,7 @@ function CategoryWorlds() {
   );
 }
 
-function ProductCard({ product }: { product: HomeProduct }) {
+function ProductCard({ product }: { product: Product }) {
   return (
     <article className={`${styles.productCard} ${styles.motionReveal}`} data-home-motion-item>
       <Link prefetch={false} href={`/product/${product.slug}`} className={styles.productImage}>
@@ -64,7 +62,7 @@ function ProductCard({ product }: { product: HomeProduct }) {
   );
 }
 
-function ProductShelf({ title, ids }: { title: string; ids: string[] }) {
+function ProductShelf({ title, products }: { title: string; products: Product[] }) {
   const isNewArrivals = title === "New Arrivals";
 
   return (
@@ -73,7 +71,7 @@ function ProductShelf({ title, ids }: { title: string; ids: string[] }) {
         <div><h2 id={`${title.replaceAll(" ", "-").toLowerCase()}-title`}>{title}</h2>{title === "Signature Collection" && <p>Explore our most loved pieces.</p>}</div>
         <Link prefetch={false} href="/shop/all">View all</Link>
       </div>
-      <div className={styles.productGrid} data-home-shelf-track>{ids.map((id) => <ProductCard product={homeProducts[id]} key={id} />)}</div>
+      <div className={styles.productGrid} data-home-shelf-track>{products.map((product) => <ProductCard product={product} key={product.id} />)}</div>
       <div className={`${styles.dots} ${styles.motionReveal}`} data-home-motion-item aria-hidden="true">{Array.from({ length: 6 }, (_, index) => <i data-home-shelf-dot key={index} />)}</div>
     </section>
   );
@@ -94,6 +92,7 @@ function PressMarks() {
   return <section className={styles.press} aria-labelledby="press-title" data-home-reveal="press"><h2 id="press-title" className={styles.motionReveal} data-home-motion-item>As seen in</h2><div>{pressMarks.map((mark) => <span className={styles.motionReveal} data-home-motion-item key={mark}>{mark}</span>)}</div></section>;
 }
 
-export function Homepage() {
-  return <><HomeMotion /><HomeHero /><CategoryWorlds /><ProductShelf title="Signature Collection" ids={signatureProductIds} /><TrustStrip /><ProductShelf title="New Arrivals" ids={newArrivalProductIds} /><PressMarks /></>;
+export async function Homepage() {
+  const { signature, newArrivals } = await getHomepageShelves();
+  return <><HomeMotion /><HomeHero /><CategoryWorlds /><ProductShelf title="Signature Collection" products={signature} /><TrustStrip /><ProductShelf title="New Arrivals" products={newArrivals} /><PressMarks /></>;
 }

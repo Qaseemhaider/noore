@@ -7,6 +7,7 @@
   --color-obsidian: #121212;
   --color-crimson: #8f1020;
   --color-crimson-hover: #74101b;
+  --color-crimson-active: #4d0a12;
   --color-champagne: #d8c3a5;
   --color-muted: #625d57;
   --color-border: #d8d0c5;
@@ -242,6 +243,29 @@ main {
 
 .noore-button--checkout-secondary:hover {
   background: var(--color-surface-muted);
+}
+
+/* Primary CTA on auth/account forms — checkout-primary strength: solid
+   canonical crimson at 52px with a clear pressed state. Unlayered rules
+   override Tailwind's min-h/px utilities; opacity is forced to 1 only while
+   enabled so the genuine disabled state still fades via disabled:opacity-50. */
+.noore-button--auth-primary {
+  background: var(--color-crimson);
+  color: var(--color-white);
+  min-height: 52px;
+  padding-inline: 2rem;
+}
+
+.noore-button--auth-primary:not(:disabled) {
+  opacity: 1;
+}
+
+.noore-button--auth-primary:hover {
+  background: var(--color-crimson-hover);
+}
+
+.noore-button--auth-primary:active {
+  background: var(--color-crimson-active);
 }
 
 .skip-link {

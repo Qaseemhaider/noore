@@ -10,6 +10,19 @@ interface WishlistContextType {
 
 const WishlistContext = createContext<WishlistContextType | undefined>(undefined);
 
+const LEGACY_ID_TO_SLUG: Record<string, string> = {
+  haya: "noore-e-haya-abaya",
+  luna: "luna-abaya",
+  dusk: "dusk-embroidered-abaya",
+  elegance: "elegance-abaya",
+  chiffon: "chiffon-hijab",
+  chadar: "noore-chadar",
+  jersey: "premium-jersey-hijab",
+  linen: "linen-abaya",
+};
+
+const normalizeIds = (ids: string[]) => ids.map((id) => LEGACY_ID_TO_SLUG[id] ?? id);
+
 export function WishlistProvider({ children }: { children: React.ReactNode }) {
   const [wishlistIds, setWishlistIds] = useState<string[]>([]);
   const hydrated = useRef(false);
@@ -17,7 +30,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       const savedWishlist = localStorage.getItem('wishlist');
-      setWishlistIds(savedWishlist ? JSON.parse(savedWishlist) : []);
+      setWishlistIds(savedWishlist ? normalizeIds(JSON.parse(savedWishlist)) : []);
     } catch {
       setWishlistIds([]);
     }

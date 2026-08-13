@@ -1,14 +1,12 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ProductCard } from "@/components/catalog/product-grid";
-import { products } from "@/lib/catalog-data";
+import type { Product } from "@/lib/catalog-data";
 
 interface CompleteTheLookProps {
-  relatedProductIds: string[];
+  relatedProducts: Product[];
 }
 
-export function CompleteTheLook({ relatedProductIds }: CompleteTheLookProps) {
-  const relatedProducts = products.filter((p) => relatedProductIds.includes(p.id));
-
+export function CompleteTheLook({ relatedProducts }: CompleteTheLookProps) {
   if (relatedProducts.length === 0) return null;
 
   return (

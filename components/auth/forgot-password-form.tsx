@@ -107,7 +107,7 @@ export function ForgotPasswordForm() {
 
         <Button
           type="submit"
-          className="mt-2 min-w-44"
+          className="mt-2 min-w-44 noore-button--auth-primary"
           disabled={submitting}
           aria-busy={submitting}
         >

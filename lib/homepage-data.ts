@@ -1,16 +1,7 @@
-import { products } from "./catalog-data";
-
 export type HomeImage = {
   src: string;
   alt: string;
   position?: string;
-};
-
-export type HomeProduct = {
-  slug: string;
-  name: string;
-  price: number;
-  image: HomeImage;
 };
 
 export const homeHero = {
@@ -30,26 +21,6 @@ export const homeWorlds = [
   { name: "Chadars", href: "/shop/chadars", image: { src: "/images/home/product-taupe-temporary.png", alt: "Taupe modest garment", position: "50% 30%" } },
   { name: "Collections", href: "/shop", image: { src: "/images/home/product-brown-temporary.png", alt: "Chocolate brown abaya", position: "50% 30%" } },
 ] as const;
-
-const homepageProductIds = ["haya", "luna", "dusk", "elegance", "chiffon", "chadar", "jersey", "linen"] as const;
-
-const catalogProductById = new Map(products.map((product) => [product.id, product]));
-
-export const homeProducts: Record<string, HomeProduct> = Object.fromEntries(
-  homepageProductIds.map((id) => {
-    const product = catalogProductById.get(id);
-    if (!product) {
-      throw new Error(`Homepage product "${id}" is not in catalog-data`);
-    }
-    return [
-      id,
-      { slug: product.slug, name: product.name, price: product.price, image: { src: product.image.src, alt: product.image.alt } },
-    ];
-  }),
-);
-
-export const signatureProductIds = ["haya", "luna", "dusk", "elegance"];
-export const newArrivalProductIds = ["chiffon", "chadar", "jersey", "linen"];
 
 export const trustItems = [
   { icon: "delivery", title: "Free shipping", body: "On orders above PKR 10,000" },

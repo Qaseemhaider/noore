@@ -4,7 +4,7 @@ import {
   SupportSection,
 } from "@/components/content/support-page";
 import styles from "@/components/content/support-page.module.css";
-import { products } from "@/lib/catalog-data";
+import { getActiveProducts } from "@/lib/catalog/queries";
 
 export const metadata: Metadata = {
   title: "Size Guide",
@@ -12,7 +12,8 @@ export const metadata: Metadata = {
     "Find the right size for NOORE abayas, hijabs, and chadars. Sizes are listed for every product currently in the collection.",
 };
 
-export default function SizeGuidePage() {
+export default async function SizeGuidePage() {
+  const products = await getActiveProducts();
   const abayas = products.filter((product) => product.category === "Abayas");
   const scarves = products.filter(
     (product) => product.category === "Hijabs" || product.category === "Chadars",

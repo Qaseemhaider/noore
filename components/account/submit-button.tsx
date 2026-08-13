@@ -21,7 +21,7 @@ export function SubmitButton({
       type="submit"
       disabled={pending}
       aria-busy={pending}
-      className={className}
+      className={`noore-button--auth-primary ${className}`}
     >
       {pending ? pendingLabel : children}
     </Button>

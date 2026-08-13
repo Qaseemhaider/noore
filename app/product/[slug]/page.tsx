@@ -1,4 +1,3 @@
-import { products } from "@/lib/catalog-data";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { ProductGallery } from "@/components/product/product-gallery";
@@ -6,6 +5,7 @@ import { ProductDetails } from "@/components/product/product-details";
 import { CompleteTheLook } from "@/components/product/complete-the-look";
 import { Reviews } from "@/components/product/reviews";
 import { Reveal } from "@/components/motion/reveal";
+import { getProductBySlug, getProductsBySlugs } from "@/lib/catalog/queries";
 
 interface ProductPageProps {
   params: Promise<{
@@ -15,11 +15,13 @@ interface ProductPageProps {
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     notFound();
   }
+
+  const relatedProducts = await getProductsBySlugs(product.relatedProductIds);
 
   return (
     <div className="bg-[var(--color-warm-ivory)]">
@@ -34,7 +36,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </div>
 
         <div className="mt-[var(--space-24)] flex flex-col gap-[var(--space-24)]">
-            <CompleteTheLook relatedProductIds={product.relatedProductIds} />
+            <CompleteTheLook relatedProducts={relatedProducts} />
             <Reviews product={product} />
         </div>
       </Container>

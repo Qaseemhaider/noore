@@ -1,6 +1,6 @@
 import { CatalogShell } from "@/components/catalog/catalog-shell";
 import { ProductGrid } from "@/components/catalog/product-grid";
-import { products } from "@/lib/catalog-data";
+import { getActiveProducts } from "@/lib/catalog/queries";
 import { filterAndSortProducts, isSortParam } from "@/lib/catalog-logic";
 
 export const metadata = {
@@ -15,7 +15,8 @@ export default async function HijabsPage({
 }) {
   const params = await searchParams;
   const sort = isSortParam(params.sort) ? params.sort : undefined;
-  const filteredProducts = filterAndSortProducts(products, {
+  const allProducts = await getActiveProducts();
+  const filteredProducts = filterAndSortProducts(allProducts, {
     category: "Hijabs", // Enforce Hijabs category
     size: typeof params.size === "string" ? params.size : undefined,
   }, sort);

@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState, useMemo } from 'react';
 
-import { ProductImage, products } from "./catalog-data";
+import { ProductImage } from "./catalog-data";
 
 export interface CartItem {
   id: string;
@@ -33,10 +33,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    const CART_VERSION = '3';
-
     const savedCart = localStorage.getItem('cart');
-    const version = localStorage.getItem('cart-version');
 
     let parsedCart: CartItem[] = [];
     if (savedCart) {
@@ -47,28 +44,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
-    if (parsedCart.length > 0 && version !== CART_VERSION) {
-      // Migration: re-resolve every line price from the canonical catalog.
-      // Fixes stale persisted carts that stored the ×100 (paise) price.
-      const migrated = parsedCart.map((item) => {
-        const product = products.find(
-          (p) => p.id === item.id || p.slug === item.slug
-        );
-        return product && product.price !== item.price
-          ? { ...item, price: product.price }
-          : item;
-      });
-      setItems(migrated);
-    } else {
-      setItems(parsedCart);
-    }
+    setItems(parsedCart);
     setIsInitialized(true);
   }, []);
 
   useEffect(() => {
     if (isInitialized) {
       localStorage.setItem('cart', JSON.stringify(items));
-      localStorage.setItem('cart-version', '3');
+      localStorage.setItem('cart-version', '4');
     }
   }, [items, isInitialized]);
 
