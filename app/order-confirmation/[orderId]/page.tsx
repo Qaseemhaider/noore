@@ -1,19 +1,19 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import Link from 'next/link';
+import { ButtonLink } from '@/components/ui/button';
 
 export default function OrderConfirmationPage() {
   const params = useParams();
   const orderId = params.orderId;
 
   return (
-    <div className="container mx-auto px-4 py-16 text-center">
-      <h1 className="type-h2 mb-4">Thank You!</h1>
-      <p className="type-body mb-8">Your order {orderId} has been placed successfully.</p>
-      <Link href="/" className="bg-crimson text-white px-8 py-3">
+    <div className="noore-container py-[var(--space-16)] text-center">
+      <h1 className="type-page-title mb-[var(--space-4)]">Thank You!</h1>
+      <p className="mb-[var(--space-8)] text-[var(--color-muted)]">Your order {orderId} has been placed successfully.</p>
+      <ButtonLink href="/" variant="primary">
         Continue Shopping
-      </Link>
+      </ButtonLink>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Product } from "@/lib/catalog-data";
 import { WishlistButton } from "@/components/product/wishlist-button";
+import { Reveal } from "@/components/motion/reveal";
 
 type ProductCardProps = {
   product: Product;
@@ -40,8 +41,10 @@ type ProductGridProps = {
 export function ProductGrid({ products }: ProductGridProps) {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[var(--space-6)] gap-y-[var(--space-8)]">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+      {products.map((product, index) => (
+        <Reveal key={product.id} delay={Math.min(index, 7) * 60} distance={12}>
+          <ProductCard product={product} />
+        </Reveal>
       ))}
     </div>
   );

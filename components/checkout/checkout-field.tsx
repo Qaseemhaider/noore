@@ -12,7 +12,7 @@ export function CheckoutField({ label, ...props }: CheckoutFieldProps) {
       </label>
       <input
         {...props}
-        className="w-full border border-line p-2 focus:border-crimson outline-none"
+        className="w-full min-h-[var(--space-12)] border border-[var(--color-border)] px-[var(--space-3)] transition-colors focus:border-[var(--color-crimson)] bg-[var(--color-soft-cream)]"
       />
     </div>
   );

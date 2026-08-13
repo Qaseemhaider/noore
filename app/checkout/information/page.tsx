@@ -25,9 +25,9 @@ export default function InformationPage() {
   return (
     <CheckoutShell currentStep="information">
       <form onSubmit={handleSubmit}>
-        <h1 className="type-h2 mb-6">Contact Information</h1>
+        <h1 className="type-page-title mb-[var(--space-6)]">Contact Information</h1>
         <CheckoutField label="Email" type="email" id="email" value={data.email} onChange={(e) => updateData({ email: e.target.value })} required />
-        <h2 className="type-h3 mb-4">Shipping Address</h2>
+        <h2 className="font-serif text-[var(--text-section-title)] mb-[var(--space-4)]">Shipping Address</h2>
         <div className="grid grid-cols-2 gap-4">
           <CheckoutField label="First Name" id="firstName" value={data.firstName} onChange={(e) => updateData({ firstName: e.target.value })} required />
           <CheckoutField label="Last Name" id="lastName" value={data.lastName} onChange={(e) => updateData({ lastName: e.target.value })} required />

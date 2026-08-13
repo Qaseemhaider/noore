@@ -40,34 +40,34 @@ export function ReviewForm({ productId, onReviewAdded }: ReviewFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-4 border border-line rounded">
-      <h3 className="font-semibold text-ink">Write a Review</h3>
-      {error && <p className="text-red-500 text-sm">{error}</p>}
+    <form onSubmit={handleSubmit} className="space-y-[var(--space-4)] p-[var(--space-4)] border border-[var(--color-border)]">
+      <h3 className="font-semibold text-[var(--color-obsidian)]">Write a Review</h3>
+      {error && <p className="text-[var(--color-crimson)] text-sm">{error}</p>}
       
       <div>
-        <label className="block text-sm font-medium text-ink-muted mb-1">Rating</label>
+        <label className="block text-sm font-medium text-[var(--color-muted)] mb-1">Rating</label>
         <StarRating rating={rating} interactive onRatingChange={setRating} />
       </div>
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-ink-muted mb-1">Name</label>
+        <label htmlFor="name" className="block text-sm font-medium text-[var(--color-muted)] mb-1">Name</label>
         <input 
           id="name"
           type="text" 
           value={name} 
           onChange={(e) => setName(e.target.value)}
-          className="w-full p-2 border border-line rounded text-sm"
+          className="w-full min-h-[var(--space-12)] border border-[var(--color-border)] px-[var(--space-3)] text-sm bg-[var(--color-soft-cream)] focus:border-[var(--color-crimson)]"
           required
         />
       </div>
 
       <div>
-        <label htmlFor="comment" className="block text-sm font-medium text-ink-muted mb-1">Review</label>
+        <label htmlFor="comment" className="block text-sm font-medium text-[var(--color-muted)] mb-1">Review</label>
         <textarea 
           id="comment"
           value={comment} 
           onChange={(e) => setComment(e.target.value)}
-          className="w-full p-2 border border-line rounded text-sm"
+          className="w-full border border-[var(--color-border)] px-[var(--space-3)] py-[var(--space-2)] text-sm bg-[var(--color-soft-cream)] focus:border-[var(--color-crimson)]"
           rows={3}
           required
         />

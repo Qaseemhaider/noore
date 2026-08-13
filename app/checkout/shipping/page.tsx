@@ -17,14 +17,14 @@ export default function ShippingPage() {
   return (
     <CheckoutShell currentStep="shipping">
       <form onSubmit={handleSubmit}>
-        <h1 className="type-h2 mb-6">Shipping Method</h1>
-        <div className="space-y-4 mb-8">
-          <label className="flex items-center p-4 border border-line">
-            <input type="radio" name="shipping" value="standard" checked={data.shippingMethod === 'standard'} onChange={() => updateData({ shippingMethod: 'standard' })} className="mr-4" />
+        <h1 className="type-page-title mb-[var(--space-6)]">Shipping Method</h1>
+        <div className="space-y-[var(--space-4)] mb-[var(--space-8)]">
+          <label className="flex items-center p-[var(--space-4)] border border-[var(--color-border)] cursor-pointer transition-colors hover:border-[var(--color-crimson)]">
+            <input type="radio" name="shipping" value="standard" checked={data.shippingMethod === 'standard'} onChange={() => updateData({ shippingMethod: 'standard' })} className="mr-[var(--space-4)]" />
             <span>Standard Shipping - Free (3-5 business days)</span>
           </label>
-          <label className="flex items-center p-4 border border-line">
-            <input type="radio" name="shipping" value="express" checked={data.shippingMethod === 'express'} onChange={() => updateData({ shippingMethod: 'express' })} className="mr-4" />
+          <label className="flex items-center p-[var(--space-4)] border border-[var(--color-border)] cursor-pointer transition-colors hover:border-[var(--color-crimson)]">
+            <input type="radio" name="shipping" value="express" checked={data.shippingMethod === 'express'} onChange={() => updateData({ shippingMethod: 'express' })} className="mr-[var(--space-4)]" />
             <span>Express Shipping - PKR 500 (1-2 business days)</span>
           </label>
         </div>

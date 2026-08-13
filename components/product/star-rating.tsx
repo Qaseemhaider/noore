@@ -15,7 +15,7 @@ export function StarRating({ rating, interactive = false, onRatingChange, size =
           <button
             key={star}
             type="button"
-            className={`transition-colors ${star <= rating ? 'text-amber-500' : 'text-gray-300'}`}
+            className={`transition-colors ${star <= rating ? 'text-[var(--color-obsidian)]' : 'text-[var(--color-border)] hover:text-[var(--color-obsidian)]'}`}
             onClick={() => onRatingChange?.(star)}
             aria-label={`${star} star${star > 1 ? 's' : ''}`}
           >
@@ -24,7 +24,7 @@ export function StarRating({ rating, interactive = false, onRatingChange, size =
         ) : (
           <StarIcon 
             key={star} 
-            className={star <= rating ? 'text-amber-500' : 'text-gray-300'} 
+            className={star <= rating ? 'text-[var(--color-obsidian)]' : 'text-[var(--color-border)]'} 
             width={size} 
             height={size}
           />

@@ -59,10 +59,6 @@ export function PinterestIcon(props: IconProps) {
   return <svg {...defaults} {...props}><circle cx="12" cy="12" r="8" /><path d="M10.5 17.5c1-2.5 1.5-4.7 2-7 .5-2 3.5-1.5 3 1-.4 2-1.8 3-3.4 2.5-2-.6-3-2.5-2.3-4.5.8-2.5 4.3-3.5 6.4-1.8 2.7 2.2 1.2 7.5-2.1 9" /><path d="M10.5 17.5 9.7 20" /></svg>;
 }
 
-export function PlusIcon(props: IconProps) {
-  return <svg {...defaults} viewBox="0 0 16 16" width="16" height="16" {...props}><path d="M8 3v10M3 8h10" /></svg>;
-}
-
 export function StarIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg 

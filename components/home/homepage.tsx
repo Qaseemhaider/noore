@@ -22,7 +22,7 @@ function HomeHero() {
       <div className={`${styles.heroMedia} ${styles.heroEntranceMedia}`} data-home-entrance>
         <picture>
           <source media="(max-width: 47.999rem)" srcSet={homeHero.image.mobileSrc} />
-          <Image src={homeHero.image.src} alt={homeHero.image.alt} width={1536} height={1024} priority sizes="100vw" className={styles.heroImage} />
+          <Image src={homeHero.image.src} alt={homeHero.image.alt} width={1536} height={1024} loading="eager" fetchPriority="high" sizes="100vw" className={styles.heroImage} />
         </picture>
       </div>
       <div className={styles.heroCopy}>
@@ -54,7 +54,7 @@ function CategoryWorlds() {
 function ProductCard({ product }: { product: HomeProduct }) {
   return (
     <article className={`${styles.productCard} ${styles.motionReveal}`} data-home-motion-item>
-      <Link prefetch={false} href={`/product/${product.id}`} className={styles.productImage}>
+      <Link prefetch={false} href={`/product/${product.slug}`} className={styles.productImage}>
         <Image src={product.image.src} alt={product.image.alt} fill sizes="(max-width: 767px) 48vw, 25vw" />
       </Link>
       <button type="button" className={styles.wishlist} aria-label={`Add ${product.name} to wishlist`}><HeartIcon width={18} height={18} /></button>

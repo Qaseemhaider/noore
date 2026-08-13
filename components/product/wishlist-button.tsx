@@ -19,7 +19,7 @@ export function WishlistButton({ productId, className = "" }: WishlistButtonProp
         e.preventDefault();
         toggleWishlist(productId);
       }}
-      className={`wishlist ${className} ${isWishlisted ? 'text-[var(--color-brand)]' : 'text-[var(--color-obsidian)]'}`}
+      className={`flex size-11 items-center justify-center transition-colors hover:text-[var(--color-crimson)] ${className} ${isWishlisted ? 'text-[var(--color-crimson)]' : 'text-[var(--color-obsidian)]'}`}
       aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
     >
       <HeartIcon fill={isWishlisted ? "currentColor" : "none"} />

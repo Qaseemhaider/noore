@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import styles from "./product-gallery.module.css";
 
 interface ProductGalleryProps {
   images: { src: string; alt: string }[];
@@ -18,29 +19,36 @@ export function ProductGallery({ images }: ProductGalleryProps) {
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
-            className={`relative w-16 h-20 overflow-hidden rounded-sm border ${
-              selectedImage === index ? "border-[var(--color-crimson)]" : "border-[var(--color-border)]"
+            aria-label={`View image ${index + 1}`}
+            aria-pressed={selectedImage === index}
+            className={`relative w-16 h-20 overflow-hidden border transition-colors ${
+              selectedImage === index ? "border-[var(--color-crimson)]" : "border-[var(--color-border)] hover:border-[var(--color-crimson)]"
             }`}
           >
             <Image
               src={image.src}
               alt={`Thumbnail ${index + 1}`}
               fill
+              sizes="64px"
               className="object-cover"
             />
           </button>
         ))}
       </div>
-      
+
       {/* Main Image */}
       <div className="aspect-[4/5] relative w-full overflow-hidden bg-[var(--color-surface-muted)] order-1 lg:order-2">
-        <Image
-          src={images[selectedImage].src}
-          alt={images[selectedImage].alt}
-          fill
-          className="object-cover"
-          priority
-        />
+        <div key={selectedImage} className={`absolute inset-0 ${styles.imageFade}`}>
+          <Image
+            src={images[selectedImage].src}
+            alt={images[selectedImage].alt}
+            fill
+            sizes="(max-width: 63.999rem) 100vw, 60vw"
+            className="object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
       </div>
     </div>
   );

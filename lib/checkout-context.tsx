@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 
 export interface CheckoutData {
   email: string;
@@ -37,16 +37,23 @@ const initialData: CheckoutData = {
 const CheckoutContext = createContext<CheckoutContextType | undefined>(undefined);
 
 export function CheckoutProvider({ children }: { children: React.ReactNode }) {
-  const [data, setData] = useState<CheckoutData>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('checkoutData');
-      return saved ? JSON.parse(saved) : initialData;
-    }
-    return initialData;
-  });
+  const [data, setData] = useState<CheckoutData>(initialData);
+  const hydrated = useRef(false);
 
   useEffect(() => {
-    localStorage.setItem('checkoutData', JSON.stringify(data));
+    try {
+      const saved = localStorage.getItem('checkoutData');
+      setData(saved ? { ...initialData, ...JSON.parse(saved) } : initialData);
+    } catch {
+      setData(initialData);
+    }
+    hydrated.current = true;
+  }, []);
+
+  useEffect(() => {
+    if (hydrated.current) {
+      localStorage.setItem('checkoutData', JSON.stringify(data));
+    }
   }, [data]);
 
   const updateData = (newData: Partial<CheckoutData>) => {

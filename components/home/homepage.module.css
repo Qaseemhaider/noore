@@ -80,8 +80,8 @@
   .trustItem { min-height:5.25rem; padding:.8rem .35rem; border-bottom:1px solid var(--color-border); }
   .trustItem:last-child { border-bottom:0; }
   .press { padding:2.35rem 1rem 2.5rem; }
-  .press>div { display:grid; grid-template-columns:repeat(6,1fr); column-gap:.6rem; row-gap:.8rem; text-align:center; }
-  .press span { grid-column:span 2; font-size:1.35rem; white-space:nowrap; }
+  .press>div { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); column-gap:.6rem; row-gap:.8rem; text-align:center; }
+  .press span { grid-column:span 2; font-size:clamp(.7rem,2.9vw,1.35rem); white-space:nowrap; }
   .press span:nth-child(4) { grid-column:2 / span 2; }
 }
 

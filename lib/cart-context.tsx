@@ -20,6 +20,7 @@ interface CartContextType {
   addToCart: (item: CartItem) => void;
   removeFromCart: (itemId: string) => void;
   updateQuantity: (itemId: string, quantity: number) => void;
+  clearCart: () => void;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   subtotal: number;
@@ -104,12 +105,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     );
   };
 
+  const clearCart = () => setItems([]);
+
   const subtotal = useMemo(() => {
     return items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   }, [items]);
 
   return (
-    <CartContext.Provider value={{ items, addToCart, removeFromCart, updateQuantity, isOpen, setIsOpen, subtotal }}>
+    <CartContext.Provider value={{ items, addToCart, removeFromCart, updateQuantity, clearCart, isOpen, setIsOpen, subtotal }}>
       {children}
     </CartContext.Provider>
   );

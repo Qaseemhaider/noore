@@ -22,9 +22,9 @@ export function CatalogShell({ title, resultCount, children }: CatalogShellProps
         <aside className="hidden lg:block">
             <FilterPanel />
         </aside>
-        <main>
+        <div>
           {children}
-        </main>
+        </div>
       </div>
     </Container>
   );

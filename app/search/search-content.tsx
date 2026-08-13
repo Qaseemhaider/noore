@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { products } from "@/lib/catalog-data";
 import { ProductGrid } from "@/components/catalog/product-grid";
 import { SearchIcon } from "@/components/icons";
+import { Container } from "@/components/ui/container";
+import { ButtonLink } from "@/components/ui/button";
 
 export default function SearchContent() {
   const searchParams = useSearchParams();
@@ -26,8 +28,8 @@ export default function SearchContent() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <form onSubmit={handleSearch} className="mb-8 flex items-center border-b border-[var(--color-obsidian)] pb-2">
+    <Container className="py-[var(--space-12)]">
+      <form onSubmit={handleSearch} className="mb-[var(--space-8)] flex items-center border-b border-[var(--color-obsidian)] pb-2">
         <SearchIcon className="size-6 text-[var(--color-obsidian)]" />
         <input
           value={query}
@@ -40,21 +42,21 @@ export default function SearchContent() {
       </form>
       
       {!query ? (
-        <h1 className="text-2xl font-bold mb-6">Search</h1>
+        <h1 className="type-page-title mb-[var(--space-6)]">Search</h1>
       ) : (
-        <h1 className="text-2xl font-bold mb-6">Search Results for &quot;{query}&quot;</h1>
+        <h1 className="type-page-title mb-[var(--space-6)]">Search Results for &quot;{query}&quot;</h1>
       )}
       
       {query && filteredProducts.length > 0 ? (
         <ProductGrid products={filteredProducts} />
       ) : query ? (
-        <div className="text-center py-12">
-          <p className="text-lg text-[var(--color-obsidian)] mb-6">No products found matching your search.</p>
-          <a href="/shop" className="inline-block bg-[var(--color-obsidian)] px-6 py-3 text-white">Continue Shopping</a>
+        <div className="text-center py-[var(--space-12)]">
+          <p className="text-lg text-[var(--color-obsidian)] mb-[var(--space-6)]">No products found matching your search.</p>
+          <ButtonLink href="/shop" variant="dark">Continue Shopping</ButtonLink>
         </div>
       ) : (
          <p className="text-lg text-[var(--color-obsidian)]">Enter a search term to find products.</p>
       )}
-    </div>
+    </Container>
   );
 }

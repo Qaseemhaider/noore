@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Product } from "@/lib/catalog-data";
 import { getReviews, Review } from "@/lib/review-data";
@@ -8,11 +8,12 @@ import { ReviewList } from "./review-list";
 import { ReviewForm } from "./review-form";
 
 export function Reviews({ product }: { product: Product }) {
-  const [reviews, setReviews] = useState<Review[]>(() => {
-    if (typeof window === 'undefined') return [];
-    return getReviews(product.id);
-  });
+  const [reviews, setReviews] = useState<Review[]>([]);
   const [showForm, setShowForm] = useState(false);
+
+  useEffect(() => {
+    setReviews(getReviews(product.id));
+  }, [product.id]);
 
   const loadReviews = () => {
     setReviews(getReviews(product.id));

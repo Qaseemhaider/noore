@@ -5,6 +5,7 @@ import { ProductGallery } from "@/components/product/product-gallery";
 import { ProductDetails } from "@/components/product/product-details";
 import { CompleteTheLook } from "@/components/product/complete-the-look";
 import { Reviews } from "@/components/product/reviews";
+import { Reveal } from "@/components/motion/reveal";
 
 interface ProductPageProps {
   params: Promise<{
@@ -24,8 +25,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
     <div className="bg-[var(--color-warm-ivory)]">
       <Container className="py-[var(--space-16)]">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(300px,450px)] gap-[var(--space-16)]">
-          <ProductGallery images={product.images} />
-          <ProductDetails product={product} />
+          <Reveal distance={16}>
+            <ProductGallery images={product.images} />
+          </Reveal>
+          <Reveal delay={90} distance={16}>
+            <ProductDetails product={product} />
+          </Reveal>
         </div>
 
         <div className="mt-[var(--space-24)] flex flex-col gap-[var(--space-24)]">

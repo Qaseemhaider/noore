@@ -1,0 +1,16 @@
+.imageFade {
+  animation: gallery-fade var(--duration-base) var(--ease-out);
+}
+
+@keyframes gallery-fade {
+  from {
+    opacity: 0;
+    transform: translateY(0.25rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imageFade {
+    animation: none;
+  }
+}

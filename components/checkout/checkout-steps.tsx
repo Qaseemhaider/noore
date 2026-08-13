@@ -8,23 +8,33 @@ export function CheckoutSteps({ currentStep }: { currentStep: 'information' | 's
     { name: 'Payment', path: '/checkout/payment' },
   ];
 
+  const currentIndex = steps.findIndex(s => s.path.includes(currentStep));
+
   return (
     <nav aria-label="Checkout progress" className="mb-8">
       <ol className="flex items-center space-x-4">
         {steps.map((step, index) => {
-          const isActive = step.path.includes(currentStep);
-          const isCompleted = index < steps.findIndex(s => s.path.includes(currentStep));
-          
+          const isActive = index === currentIndex;
+          const isCompleted = index < currentIndex;
+
           return (
             <li key={step.name} className="flex items-center">
-              {index > 0 && <span className="mx-2 text-ink-muted">/</span>}
-              <Link 
-                href={isCompleted ? step.path : '#'}
-                className={`type-label ${isActive ? 'text-crimson' : isCompleted ? 'text-ink' : 'text-ink-muted'}`}
-                aria-current={isActive ? 'step' : undefined}
-              >
-                {step.name}
-              </Link>
+              {index > 0 && <span aria-hidden="true" className="mx-2 text-[var(--color-muted)]">/</span>}
+              {isCompleted ? (
+                <Link
+                  href={step.path}
+                  className="type-label text-[var(--color-obsidian)]"
+                >
+                  {step.name}
+                </Link>
+              ) : (
+                <span
+                  className={`type-label ${isActive ? 'text-[var(--color-crimson)]' : 'text-[var(--color-muted)]'}`}
+                  aria-current={isActive ? 'step' : undefined}
+                >
+                  {step.name}
+                </span>
+              )}
             </li>
           );
         })}

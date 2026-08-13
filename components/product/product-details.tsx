@@ -13,7 +13,7 @@ interface ProductDetailsProps {
 }
 
 const SizeSelector = ({ sizes, selectedSize, onSelect }: { sizes: string[], selectedSize: string, onSelect: (size: string) => void }) => (
-  <div className="space-y-[var(--space-2)]">
+  <div className="space-y-[var(--space-2)]" role="group" aria-label="Size">
     <label className="text-[var(--text-label)] font-sans font-bold uppercase tracking-wider text-[var(--color-obsidian)]">Size</label>
     <div className="flex gap-[var(--space-2)] flex-wrap">
       {sizes.map((size) => (
@@ -86,7 +86,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       {/* Purchase Area */}
       <div ref={purchaseAreaRef} className="flex flex-col gap-[var(--space-6)]">
         {/* Color Selector */}
-        <div className="space-y-[var(--space-2)]">
+        <div className="space-y-[var(--space-2)]" role="group" aria-label="Color">
             <label className="text-[var(--text-label)] font-sans font-bold uppercase tracking-wider text-[var(--color-obsidian)]">Color: {selectedColor}</label>
             <div className="flex gap-[var(--space-2)]">
             {product.availableColors.map((color) => (

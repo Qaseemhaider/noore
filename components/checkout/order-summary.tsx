@@ -8,22 +8,22 @@ export function OrderSummary() {
   const total = subtotal + shipping;
 
   return (
-    <div className="bg-surface-muted p-6">
-      <h2 className="type-h3 mb-4">Order Summary</h2>
-      <ul className="mb-4 space-y-4">
+    <aside aria-label="Order summary" className="bg-[var(--color-surface-muted)] p-[var(--space-6)]">
+      <h2 className="font-serif text-[var(--text-section-title)] mb-[var(--space-4)]">Order Summary</h2>
+      <ul className="mb-[var(--space-4)] space-y-[var(--space-4)]">
         {items.map((item) => (
-          <li key={`${item.id}-${item.size}-${item.color}`} className="flex justify-between">
+          <li key={`${item.id}-${item.size}-${item.color}`} className="flex justify-between gap-[var(--space-4)]">
             <div>
-              <p className="type-body">{item.name}</p>
-              <p className="type-metadata text-ink-muted">
+              <p className="text-[var(--color-obsidian)]">{item.name}</p>
+              <p className="type-meta">
                 {item.color} / {item.size} x {item.quantity}
               </p>
             </div>
-            <p className="type-body">{formatPrice(item.price * item.quantity)}</p>
+            <p className="text-[var(--color-obsidian)]">{formatPrice(item.price * item.quantity)}</p>
           </li>
         ))}
       </ul>
-      <div className="border-t border-line pt-4 space-y-2">
+      <div className="border-t border-[var(--color-border)] pt-[var(--space-4)] space-y-[var(--space-2)]">
         <div className="flex justify-between">
           <p>Subtotal</p>
           <p>{formatPrice(subtotal)}</p>
@@ -32,11 +32,11 @@ export function OrderSummary() {
           <p>Shipping</p>
           <p>{shipping === 0 ? 'Free' : formatPrice(shipping)}</p>
         </div>
-        <div className="flex justify-between type-h3 pt-2">
+        <div className="flex justify-between font-serif text-[var(--text-section-title)] pt-[var(--space-2)]">
           <p>Total</p>
           <p>{formatPrice(total)}</p>
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

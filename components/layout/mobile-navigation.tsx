@@ -22,6 +22,7 @@ import {
   supportNavigation,
 } from "@/lib/navigation";
 import { Wordmark } from "./wordmark";
+import { useCart } from "@/lib/cart-context";
 
 const socialIcons = [
   InstagramIcon,
@@ -36,6 +37,7 @@ export function MobileNavigation() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const shopId = useId();
+  const { setIsOpen: setCartIsOpen } = useCart();
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -163,7 +165,7 @@ export function MobileNavigation() {
             <li><Link prefetch={false} href="/search" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><SearchIcon /> Search</Link></li>
             <li><Link prefetch={false} href="/account" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><AccountIcon /> My Account</Link></li>
             <li><Link prefetch={false} href="/wishlist" onClick={closeMenu} className="flex min-h-11 items-center gap-4 text-xs font-semibold uppercase"><HeartIcon /> Wishlist</Link></li>
-            <li><button type="button" onClick={closeMenu} className="flex min-h-11 w-full items-center gap-4 text-xs font-semibold uppercase"><BagIcon /> My Cart <span className="text-[var(--color-crimson)]">(0)</span></button></li>
+            <li><button type="button" onClick={() => { closeMenu(); setCartIsOpen(true); }} className="flex min-h-11 w-full items-center gap-4 text-xs font-semibold uppercase"><BagIcon /> My Cart <span className="text-[var(--color-crimson)]">(0)</span></button></li>
           </ul>
 
           <ul className="py-4">

@@ -1,3 +1,5 @@
+import { products } from "./catalog-data";
+
 export type HomeImage = {
   src: string;
   alt: string;
@@ -5,7 +7,7 @@ export type HomeImage = {
 };
 
 export type HomeProduct = {
-  id: string;
+  slug: string;
   name: string;
   price: number;
   image: HomeImage;
@@ -29,16 +31,22 @@ export const homeWorlds = [
   { name: "Collections", href: "/shop", image: { src: "/images/home/product-brown-temporary.png", alt: "Chocolate brown abaya", position: "50% 30%" } },
 ] as const;
 
-export const homeProducts: Record<string, HomeProduct> = {
-  haya: { id: "haya", name: "Noore-e-Haya Abaya", price: 12900, image: { src: "/images/home/product-brown-temporary.png", alt: "Chocolate brown Noore-e-Haya abaya" } },
-  luna: { id: "luna", name: "Luna Abaya", price: 11500, image: { src: "/images/home/product-black-temporary.png", alt: "Black Luna abaya" } },
-  dusk: { id: "dusk", name: "Dusk Embroidered Abaya", price: 13900, image: { src: "/images/home/product-black-temporary.png", alt: "Black embroidered Dusk abaya" } },
-  elegance: { id: "elegance", name: "Elegance Abaya", price: 12500, image: { src: "/images/home/product-taupe-temporary.png", alt: "Taupe Elegance abaya" } },
-  chiffon: { id: "chiffon", name: "Chiffon Hijab", price: 1850, image: { src: "/images/home/product-rose-temporary.png", alt: "Dusty rose chiffon hijab" } },
-  chadar: { id: "chadar", name: "Noore Chadar", price: 2450, image: { src: "/images/home/product-taupe-temporary.png", alt: "Taupe Noore chadar" } },
-  jersey: { id: "jersey", name: "Premium Jersey Hijab", price: 1950, image: { src: "/images/home/product-black-temporary.png", alt: "Black premium jersey hijab" } },
-  linen: { id: "linen", name: "Linen Abaya", price: 11900, image: { src: "/images/home/product-brown-temporary.png", alt: "Brown linen abaya" } },
-};
+const homepageProductIds = ["haya", "luna", "dusk", "elegance", "chiffon", "chadar", "jersey", "linen"] as const;
+
+const catalogProductById = new Map(products.map((product) => [product.id, product]));
+
+export const homeProducts: Record<string, HomeProduct> = Object.fromEntries(
+  homepageProductIds.map((id) => {
+    const product = catalogProductById.get(id);
+    if (!product) {
+      throw new Error(`Homepage product "${id}" is not in catalog-data`);
+    }
+    return [
+      id,
+      { slug: product.slug, name: product.name, price: product.price, image: { src: product.image.src, alt: product.image.alt } },
+    ];
+  }),
+);
 
 export const signatureProductIds = ["haya", "luna", "dusk", "elegance"];
 export const newArrivalProductIds = ["chiffon", "chadar", "jersey", "linen"];
