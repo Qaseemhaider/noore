@@ -13,11 +13,15 @@ const AUTH_PATHS = ["/login", "/signup", "/forgot-password"];
  *    navigation keeps the /account link and protected pages smooth; the check
  *    short-circuits instantly for anonymous visitors (no session cookie).
  * 2. Redirect anonymous users away from /account and authenticated users away
- *    from the auth pages.
+ *    from the auth pages. Plus a COARSE /admin guard: anonymous visitors are
+ *    sent to the login page.
  *
  * This is NOT the authorization boundary. Every protected Server Component
- * and Server Action independently calls `supabase.auth.getUser()` and scopes
- * queries to `auth.uid()`. The storefront is never redirected here.
+ * and Server Action independently calls `supabase.auth.getUser()` + the
+ * DB-authoritative staff checks (`lib/admin/authorization.ts`). /admin pages
+ * independently verify staff membership, role permissions and (for sensitive
+ * actions) AAL2. The proxy guard only prevents the login redirect from
+ * happening after a full staff authorization round-trip.
  */
 export async function updateSession(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -26,12 +30,14 @@ export async function updateSession(request: NextRequest) {
   const isAuthPath = AUTH_PATHS.some(
     (path) => pathname === path || pathname.startsWith(`${path}/`)
   );
+  const isAdminPath =
+    pathname === "/admin" || pathname.startsWith("/admin/");
 
   const hasSessionCookie = request.cookies
     .getAll()
     .some((cookie) => cookie.name.startsWith("sb-"));
 
-  if (!isAccountPath && !isAuthPath && !hasSessionCookie) {
+  if (!isAccountPath && !isAuthPath && !isAdminPath && !hasSessionCookie) {
     // Anonymous storefront traffic: nothing to refresh or guard.
     return NextResponse.next({ request });
   }
@@ -62,6 +68,13 @@ export async function updateSession(request: NextRequest) {
   const user = data.user;
 
     if (!user && isAccountPath) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/login";
+      url.searchParams.set("next", pathname);
+      return NextResponse.redirect(url);
+    }
+
+    if (!user && isAdminPath) {
       const url = request.nextUrl.clone();
       url.pathname = "/login";
       url.searchParams.set("next", pathname);

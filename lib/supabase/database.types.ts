@@ -101,6 +101,7 @@ export type Database = {
           entity: string | null
           entity_id: string | null
           id: string
+          role_snapshot: string | null
         }
         Insert: {
           action: string
@@ -110,6 +111,7 @@ export type Database = {
           entity?: string | null
           entity_id?: string | null
           id?: string
+          role_snapshot?: string | null
         }
         Update: {
           action?: string
@@ -119,6 +121,7 @@ export type Database = {
           entity?: string | null
           entity_id?: string | null
           id?: string
+          role_snapshot?: string | null
         }
         Relationships: []
       }
@@ -1236,6 +1239,12 @@ export type Database = {
       }
     }
     Functions: {
+      admin_bootstrap_owner: {
+        Args: {
+          p_email: string
+        }
+        Returns: string
+      }
       admin_log: {
         Args: {
           p_action: string
@@ -1244,6 +1253,35 @@ export type Database = {
           p_entity_id?: string
         }
         Returns: undefined
+      }
+      consume_staff_invite: {
+        Args: {
+          p_email: string
+          p_token: string
+        }
+        Returns: string
+      }
+      create_staff_invite: {
+        Args: {
+          p_email: string
+          p_role: string
+        }
+        Returns: {
+          invite_id: string
+          token: string
+        }[]
+      }
+      get_my_staff_context: {
+        Args: Record<PropertyKey, never>
+        Returns: {
+          created_at: string
+          display_name: string | null
+          email: string
+          id: string
+          is_active: boolean
+          role: string
+          updated_at: string
+        }
       }
       create_order: {
         Args: {

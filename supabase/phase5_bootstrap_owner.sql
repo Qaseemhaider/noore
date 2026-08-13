@@ -1,0 +1,30 @@
+-- =============================================================================
+-- NOORE · PHASE 5 — ONE-TIME OWNER BOOTSTRAP (run AFTER 000008 migration)
+--
+-- Run in the Supabase Dashboard SQL editor, exactly once, as the postgres role.
+-- The target user MUST already exist in Supabase Auth (they must have signed
+-- up / been created first — no account is auto-created here).
+--
+-- The function refuses to run if an owner already exists (one-time only), and
+-- EXECUTE is not granted to any browser role, so this can never be triggered
+-- from the app.
+--
+-- TEST IDENTITY (Phase 5 verification):  dev-test@noore.local
+--   An existing dev account used for security testing (signing up a brand-new
+--   auth user is blocked here: confirmation emails are rate-limited and there
+--   is no SMTP provider configured, so new accounts stay unconfirmed). Replace
+--   the email below with your real owner account's email when you are ready to
+--   bootstrap the production owner. Never commit the real owner's email here.
+--
+--   IMPORTANT: after Phase 5 verification, run the cleanup snippet below to
+--   remove the test owner so the one-time bootstrap stays available for your
+--   real account:
+--
+--     delete from public.staff_members where email = 'dev-test@noore.local';
+--
+--   (audit rows are append-only and stay; that is fine.)
+--
+-- This call writes an OWNER_BOOTSTRAPPED audit row (no secrets, no passwords).
+-- =============================================================================
+
+select public.admin_bootstrap_owner('dev-test@noore.local');
