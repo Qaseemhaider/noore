@@ -14,11 +14,15 @@ type NavEntry = {
 const NAV_ENTRIES: NavEntry[] = [
   { href: "/admin", label: "Overview" },
   { href: "/admin/products", label: "Products", permission: "catalog.view", phase: "Phase 6" },
-  { href: "/admin/orders", label: "Orders", permission: "orders.view", phase: "Phase 6" },
-  { href: "/admin/reviews", label: "Reviews", permission: "reviews.moderate", phase: "Phase 6" },
-  { href: "/admin/content", label: "Content", permission: "content.edit", phase: "Phase 6" },
-  { href: "/admin/seo", label: "SEO", permission: "seo.edit", phase: "Phase 6" },
-  { href: "/admin/staff", label: "Staff", permission: "staff.manage", phase: "Phase 6" },
+  { href: "/admin/products/new", label: "New Product", permission: "catalog.edit", phase: "Phase 6" },
+  { href: "/admin/inventory", label: "Inventory", permission: "inventory.edit", phase: "Phase 6" },
+  { href: "/admin/categories", label: "Categories", permission: "catalog.view", phase: "Phase 6" },
+  { href: "/admin/colors", label: "Colors", permission: "catalog.view", phase: "Phase 6" },
+  { href: "/admin/sizes", label: "Sizes", permission: "catalog.view", phase: "Phase 6" },
+  { href: "/admin/reviews", label: "Reviews", permission: "reviews.moderate", phase: "Future" },
+  { href: "/admin/content", label: "Content", permission: "content.edit", phase: "Future" },
+  { href: "/admin/seo", label: "SEO", permission: "seo.edit", phase: "Future" },
+  { href: "/admin/staff", label: "Staff", permission: "staff.manage", phase: "Future" },
   { href: "/admin/security", label: "Security", permission: "security.manage" },
 ];
 
@@ -49,7 +53,21 @@ export function AdminShell({
   const sidebarNav = (
     <nav aria-label="Admin" className="flex flex-col gap-1">
       {visible.map((entry) => {
-        if (entry.phase) {
+        if (entry.phase === "Phase 6") {
+          // Implemented Phase 6 items use clickable Links
+          return (
+            <Link
+              key={entry.href}
+              href={entry.href}
+              prefetch={false}
+              className="rounded-md px-4 py-2.5 text-sm font-semibold text-[var(--color-obsidian)] transition-colors duration-200 hover:bg-[var(--color-surface-muted)]"
+            >
+              {entry.label}
+            </Link>
+          );
+        }
+        if (entry.phase === "Future") {
+          // Future items show as disabled placeholders
           return (
             <span
               key={entry.href}
@@ -63,6 +81,7 @@ export function AdminShell({
             </span>
           );
         }
+        // No phase tag = always-implemented nav item
         return (
           <Link
             key={entry.href}

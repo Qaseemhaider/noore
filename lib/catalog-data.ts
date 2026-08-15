@@ -15,6 +15,8 @@ export type Product = {
   availableColors: string[];
   isNew: boolean;
   isFeatured: boolean;
+  isSignature: boolean;
+  isActive: boolean;
   description: string;
   fabric: string;
   care: string;

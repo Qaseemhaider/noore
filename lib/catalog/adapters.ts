@@ -1,4 +1,5 @@
 import type { Product } from "@/lib/catalog-data";
+import { resolveImageSrc } from "./image-url";
 
 export const CATEGORY_NAMES = ["Abayas", "Hijabs", "Chadars"] as const;
 export type CategoryName = (typeof CATEGORY_NAMES)[number];
@@ -77,7 +78,7 @@ export function mapProductRow(row: CatalogProductRow): Product {
   const images = [...row.product_images]
     .sort((a, b) => a.position - b.position)
     .map((image) => ({
-      src: image.storage_path,
+      src: resolveImageSrc(image.storage_path),
       alt: image.alt_text ?? row.name,
     }));
 
@@ -95,6 +96,8 @@ export function mapProductRow(row: CatalogProductRow): Product {
     availableColors,
     isNew: row.is_new,
     isFeatured: row.is_featured,
+    isSignature: row.is_signature ?? false,
+    isActive: row.is_active ?? false,
     description: row.description ?? "",
     fabric: row.fabric ?? "",
     care: row.care ?? "",

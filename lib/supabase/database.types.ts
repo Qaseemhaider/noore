@@ -1261,6 +1261,31 @@ export type Database = {
         }
         Returns: string
       }
+      create_product: {
+        Args: {
+          p_care?: string
+          p_category_id: string
+          p_description?: string
+          p_fabric?: string
+          p_is_active?: boolean
+          p_is_featured?: boolean
+          p_is_new?: boolean
+          p_is_signature?: boolean
+          p_name: string
+          p_price: number
+          p_shipping_info?: string
+          p_slug: string
+          p_sort_order?: number
+        }
+        Returns: string
+      }
+      create_size: {
+        Args: {
+          p_name: string
+          p_sort_order?: number
+        }
+        Returns: string
+      }
       create_staff_invite: {
         Args: {
           p_email: string
@@ -1270,6 +1295,12 @@ export type Database = {
           invite_id: string
           token: string
         }[]
+      }
+      deactivate_product: {
+        Args: {
+          p_product_id: string
+        }
+        Returns: string
       }
       get_my_staff_context: {
         Args: Record<PropertyKey, never>
@@ -1282,6 +1313,30 @@ export type Database = {
           role: string
           updated_at: string
         }
+      }
+      adjust_inventory: {
+        Args: {
+          p_delta: number
+          p_reason: string
+          p_variant_id: string
+        }
+        Returns: number
+      }
+      create_category: {
+        Args: {
+          p_name: string
+          p_slug: string
+          p_sort_order?: number
+        }
+        Returns: string
+      }
+      create_color: {
+        Args: {
+          p_hex?: string
+          p_name: string
+          p_sort_order?: number
+        }
+        Returns: string
       }
       create_order: {
         Args: {
@@ -1316,6 +1371,137 @@ export type Database = {
           isOneToOne: true
           isSetofReturn: false
         }
+      }
+      list_admin_variants: {
+        Args: {
+          p_product_id?: string
+        }
+        Returns: {
+          color_hex: string | null
+          color_name: string
+          id: string
+          is_active: boolean
+          product_id: string
+          product_name: string
+          product_slug: string
+          size_name: string
+          sku: string
+          stock_quantity: number
+          updated_at: string
+        }[]
+      }
+      product_image_add: {
+        Args: {
+          p_product_id: string
+          p_storage_path: string
+          p_alt_text?: string
+        }
+        Returns: string
+      }
+      product_image_delete: {
+        Args: {
+          p_image_id: string
+        }
+        Returns: string
+      }
+      product_image_move: {
+        Args: {
+          p_direction: string
+          p_image_id: string
+        }
+        Returns: string
+      }
+      product_image_set_alt: {
+        Args: {
+          p_alt_text?: string | null
+          p_image_id: string
+        }
+        Returns: string
+      }
+      product_image_set_primary: {
+        Args: {
+          p_image_id: string
+        }
+        Returns: string
+      }
+      reorder_category: {
+        Args: {
+          p_category_id: string
+          p_sort_order: number
+        }
+        Returns: string
+      }
+      reorder_color: {
+        Args: {
+          p_color_id: string
+          p_sort_order: number
+        }
+        Returns: string
+      }
+      reorder_size: {
+        Args: {
+          p_size_id: string
+          p_sort_order: number
+        }
+        Returns: string
+      }
+      set_product_price: {
+        Args: {
+          p_new_price: number
+          p_product_id: string
+        }
+        Returns: string
+      }
+      set_product_status: {
+        Args: {
+          p_is_active: boolean
+          p_product_id: string
+        }
+        Returns: string
+      }
+      update_category: {
+        Args: {
+          p_category_id: string
+          p_name: string
+          p_slug: string
+          p_sort_order?: number
+        }
+        Returns: string
+      }
+      update_color: {
+        Args: {
+          p_color_id: string
+          p_hex?: string
+          p_name: string
+          p_sort_order?: number
+        }
+        Returns: string
+      }
+      update_product: {
+        Args: {
+          p_care?: string
+          p_category_id: string
+          p_description?: string
+          p_fabric?: string
+          p_is_active?: boolean
+          p_is_featured?: boolean
+          p_is_new?: boolean
+          p_is_signature?: boolean
+          p_name: string
+          p_product_id: string
+          p_shipping_info?: string
+          p_slug: string
+          p_sort_order?: number
+        }
+        Returns: string
+      }
+      update_size: {
+        Args: {
+          p_name: string
+          p_size_id: string
+          p_sort_order?: number
+        }
+        Returns: string
       }
     }
     Enums: {

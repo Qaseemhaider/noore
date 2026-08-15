@@ -12,6 +12,7 @@ export const PERMISSIONS = {
   "catalog.view": { label: "View catalog" },
   "catalog.edit": { label: "Edit catalog" },
   "inventory.edit": { label: "Adjust inventory" },
+  "inventory.manage": { label: "Manage inventory" },
   "orders.view": { label: "View orders" },
   "orders.manage": { label: "Manage orders" },
   "reviews.moderate": { label: "Moderate reviews" },
